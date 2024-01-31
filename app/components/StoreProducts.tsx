@@ -1,6 +1,7 @@
 import React from "react"
 import UseProduct from "../hooks/useProducts"
 import Link from "next/link"
+import Button from "./Button"
 
 
 export default function Products() {
@@ -18,17 +19,22 @@ export default function Products() {
             {productList.map((product) => (
                 <div key={product.id} className="flex">
                     <div className="card-content">
+
                         <div className="image-container">
-                            <img src={product.image} alt={product.title} />
+                            <Link
+                                href={`/products/${product.id}`}
+                                passHref
+                            >
+                                <img src={product.image} alt={product.title} />
+                            </Link>
                         </div>
+
                         <p className="text-title">{product.title}</p>
                         <p>{formatedPrice(product.price)}</p>
-                        <Link
-                            href={`/products/${product.id}`}
-                            passHref
-                        >
-                            <button>Detalhes</button>
-                        </Link>
+                        <Button title="Adicionar ao carrinho" />
+                        {/* <Button title="Ver detalhes" /> */}
+
+
                     </div>
                 </div>
             ))}

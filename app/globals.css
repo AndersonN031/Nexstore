@@ -111,12 +111,12 @@ html {
   border-radius: 10px;
   /* Crie um boxshadow para as bordas do card*/
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 100px 5%;
+  padding: 20px 5%;
+  gap: 20px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   height: 100%;
-  /* Garante que todos os cards tenham a mesma altura */
 }
 
 .image-container {
@@ -138,4 +138,19 @@ html {
 .text-title {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
+}
+
+.card-content button {
+  background-color: #292929;
+  color: #fff;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.card-content button:hover {
+  transform: scale(1.01);
+  background-color: #393939;
 }
