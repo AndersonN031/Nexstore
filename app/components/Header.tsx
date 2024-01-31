@@ -1,0 +1,42 @@
+"use client"
+import Link from "next/link";
+import 'bootstrap-icons/font/bootstrap-icons.css'
+
+export default function Header() {
+    return (
+        <nav>
+            <Link
+                href="/"
+                className="link"
+                legacyBehavior
+            >
+                <a>
+                    <i className="bi bi-house"></i>
+                </a>
+            </Link>
+
+            <div className="nav-links">
+                <Link
+                    href="/products"
+                    passHref
+                    legacyBehavior
+                    className="link"
+                >
+                    <a className="nav-link me-2">
+                        Produtos
+                    </a>
+                </Link>
+                <Link
+                    href="/cart"
+                    passHref
+                    legacyBehavior
+                    className="link"
+                >
+                    <a className="nav-link">
+                        <i className="bi bi-bag"></i>
+                    </a>
+                </Link>
+            </div>
+        </nav>
+    )
+}
