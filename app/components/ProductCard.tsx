@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import Button from './Button';
-import useCart, { CartProvider } from '../hooks/useCartContext';
+import { CartProvider } from '../hooks/useCartContext';
+import UseCart from '../hooks/useCartContext';
 
 const ProductCard = ({ product }: any) => {
 
-    const { addToCart } = useCart()
+    const { addToCart } = UseCart()
 
     const formatedPrice = (price: number) => {
         return price.toLocaleString('pt-BR', {

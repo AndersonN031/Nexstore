@@ -2,12 +2,12 @@
 
 import Button from "@/app/components/Button";
 import Header from "@/app/components/Header";
-import useCart from "@/app/hooks/useCartContext";
+import UseCart from "@/app/hooks/useCartContext";
 
-export default async function getId({ params }: any) {
+export default async function GetId({ params }: any) {
 
     const id = params.productId;
-    const { addToCart } = useCart()
+    const { addToCart } = UseCart()
 
 
     try {
