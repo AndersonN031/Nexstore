@@ -10,6 +10,12 @@ export type ProductTypes = {
     image: string;
 }
 
+type UseProductReturnType = {
+    productList: ProductTypes[]
+    selectedProductId: number | null
+    selectProduct: (productId: number) => void
+}
+
 export default function UseProduct() {
 
     const [productList, setProductList] = useState<ProductTypes[]>([])
@@ -42,12 +48,14 @@ export default function UseProduct() {
                 console.error(error)
             }
         }
+
         fetchProducts()
     }, [])
 
     const selectProduct = (productId: number) => {
         setSelectedProductId(productId);
     };
+
 
     return {
         productList,

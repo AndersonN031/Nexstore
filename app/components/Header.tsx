@@ -4,39 +4,44 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 
 export default function Header() {
     return (
-        <nav>
-            <Link
-                href="/"
-                className="link"
-                legacyBehavior
-            >
-                <a>
-                    <i className="bi bi-house"></i>
-                </a>
-            </Link>
+        <>
+            <header>
+                <nav>
+                    <Link
+                        href="/"
+                        className="link"
+                        legacyBehavior
+                    >
+                        <div className="logo-type">
+                            <i className="bi bi-house"></i>
+                            <h1>NexStore</h1>
+                        </div>
+                    </Link>
+                    <div className="nav-links">
+                        <Link
+                            href="/products"
+                            passHref
+                            legacyBehavior
+                            className="link"
+                        >
+                            <a className="nav-link me-2">
+                                Produtos
+                            </a>
+                        </Link>
+                        <Link
+                            href="/cart"
+                            passHref
+                            legacyBehavior
+                            className="link"
+                        >
+                            <a className="nav-link">
+                                <i className="bi bi-bag"></i>
+                            </a>
+                        </Link>
+                    </div>
+                </nav>
+            </header>
 
-            <div className="nav-links">
-                <Link
-                    href="/products"
-                    passHref
-                    legacyBehavior
-                    className="link"
-                >
-                    <a className="nav-link me-2">
-                        Produtos
-                    </a>
-                </Link>
-                <Link
-                    href="/cart"
-                    passHref
-                    legacyBehavior
-                    className="link"
-                >
-                    <a className="nav-link">
-                        <i className="bi bi-bag"></i>
-                    </a>
-                </Link>
-            </div>
-        </nav>
+        </>
     )
 }

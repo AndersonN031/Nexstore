@@ -1,13 +1,26 @@
 "use client"
 
-import Header from "@/app/components/Header";
-import Products from "../components/StoreProducts";
+import Header from "../components/Header";
+import ProductCard from "../components/ProductCard";
+import Sidebar from "../components/Sidebar";
+import UseProduct from "../hooks/useProducts";
 
-export default function AllProducts() {
+export default function Products() {
+    const { productList } = UseProduct();
+
     return (
         <>
             <Header />
-            <Products />
+
+            <div className='container-store'>
+                <Sidebar />
+                <div className="container-clothes">
+                    {productList.map((product) => (
+                        <ProductCard key={product.id} product={product} />
+                    ))}
+                </div>
+            </div >
+
         </>
-    )
+    );
 }
