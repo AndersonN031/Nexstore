@@ -47,17 +47,23 @@ export const CartProvider = ({ children }: { children?: ReactNode }) => {
                     : item
             )
             localStorage.setItem('shopping-cart', JSON.stringify(updatedCart))
-            setCart(updatedCart)
+            setCart(prevCart => {
+                console.log(prevCart)
+                return updatedCart
+            })
 
         } else {
             // se o produto não existe no carrinho, adiciona um novo item
             const updateCart = [...cart, { product, quantity: 1 }]
             localStorage.setItem('shopping-cart', JSON.stringify(updateCart))
-            setCart(updateCart)
+            setCart(prevCart => {
+                console.log(prevCart)
+                return updateCart
+            })
 
         }
-        console.log(cart)
     }
+
 
     const contextValue: CartContextType = {
         cart,

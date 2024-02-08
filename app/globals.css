@@ -202,8 +202,6 @@ nav .logo-type:hover {
 .main-container {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: center;
-  align-items: center;
   padding: 45px 8%;
   width: 100%;
   box-sizing: border-box;
@@ -216,7 +214,7 @@ nav .logo-type:hover {
   align-items: center;
   width: 101%;
   box-sizing: border-box;
-  padding-top: 250px;
+
 }
 
 .container h1 {
@@ -247,6 +245,51 @@ nav .logo-type:hover {
   transform: scale(1.05);
 }
 
+
+.image-boys {
+  display: flex;
+  width: 55rem;
+  height: 55rem;
+  background-color: orange;
+}
+
+
+.product-images-container {
+  display: flex;
+  margin: 50px 20%;
+}
+
+.card-scrollImage {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-scrollImage img {
+  width: 350px;
+  height: 360px;
+}
+
+.card-scrollImage p {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 19px;
+  padding-top: 40px;
+}
+
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #292929 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #292929 !important;
+}
+
+
 /* SECTION CONTAINER-CLOTHES */
 
 .container-store {
@@ -258,14 +301,14 @@ nav .logo-type:hover {
 .container-clothes {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin: 0px 3%;
+  margin: 50px 5%;
   /* margin-left: 20rem; */
 
 }
 
 .flex {
   flex: 1;
-  margin: 10px;
+  margin: 5% 5%;
 }
 
 .card-content {
@@ -362,11 +405,11 @@ nav .logo-type:hover {
   display: flex;
   justify-content: center;
   padding: 250px 18%;
-  gap: 40px;
+  gap: 80px;
 }
 
 .product-image img {
-  width: 220px;
+  width: 260px;
 }
 
 .product-info h1,
@@ -378,7 +421,41 @@ nav .logo-type:hover {
   font-size: 14px;
 }
 
+.product-info .price-product {
+  font-size: 18px;
+  font-weight: bold;
+}
+
 /* MAIN RESPONSIVE */
+
+@media screen and (max-width: 1650px) {
+  .main-container {
+    margin-top: 150px;
+  }
+
+  .container h1 {
+    font-size: 30px;
+  }
+
+  .container p {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .main-container {
+    margin-top: 150px;
+    flex-direction: column-reverse;
+  }
+
+  .container h1 {
+    font-size: 30px;
+  }
+
+  .container p {
+    font-size: 17px;
+  }
+}
 
 
 @media screen and (max-width: 890px) {
@@ -390,31 +467,47 @@ nav .logo-type:hover {
   nav a {
     display: none;
   }
+
+  .main-container {
+    margin-top: 150px;
+  }
+
+  .container h1 {
+    font-size: 25px;
+  }
+
+  .container p {
+    font-size: 15px;
+  }
+
+  .container .btn-home {
+    font-size: 14px;
+    padding: 10px;
+  }
 }
 
-@media screen and (max-width: 790px) {
+@media screen and (max-width: 926px) {
 
   nav a {
     display: none;
   }
 
   .main-container {
-    margin-top: -100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+    margin-top: 150px;
+    flex-direction: column-reverse;
   }
 
   .container h1 {
-    text-align: center;
-    font-size: 30px;
-
+    font-size: 25px;
   }
 
   .container p {
-    justify-content: justify;
-    font-size: 17px;
+    font-size: 15px;
+  }
+
+  .container .btn-home {
+    font-size: 14px;
+    padding: 10px;
   }
 }
 
@@ -433,6 +526,24 @@ nav .logo-type:hover {
 
   nav .logo-type h1 {
     font-size: 20px;
+  }
+
+  .main-container {
+    margin-top: 150px;
+    flex-direction: column-reverse;
+  }
+
+  .container h1 {
+    font-size: 20px;
+  }
+
+  .container p {
+    font-size: 13px;
+  }
+
+  .container .btn-home {
+    font-size: 13px;
+    padding: 7px;
   }
 
 }

@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Button from './Button';
-import { CartProvider } from '../hooks/useCartContext';
 import UseCart from '../hooks/useCartContext';
 
 const ProductCard = ({ product }: any) => {
@@ -22,27 +21,25 @@ const ProductCard = ({ product }: any) => {
 
     return (
         <>
-            <CartProvider>
 
-                <div className="flex" key={product.id}>
-                    <div className="card-content">
-                        <div className="image-container">
-                            <Link
-                                href={`/products/${product.id}`}
-                                passHref
-                            >
-                                <img src={product.image} alt={product.title} />
-                                <div className='overlay'>
-                                    <i className="bi bi-eye-fill"></i>
-                                </div>
-                            </Link>
-                        </div>
-                        <p className="text-title">{product.title}</p>
-                        <p className="text-price">{formatedPrice(product.price)}</p>
-                        <Button title="Adicionar ao carrinho" onClick={handleAddToCart} />
+            <div className="flex" key={product.id}>
+                <div className="card-content">
+                    <div className="image-container">
+                        <Link
+                            href={`/products/${product.id}`}
+                            passHref
+                        >
+                            <img src={product.image} alt={product.title} />
+                            <div className='overlay'>
+                                <i className="bi bi-eye-fill"></i>
+                            </div>
+                        </Link>
                     </div>
+                    <p className="text-title">{product.title}</p>
+                    <p className="text-price">{formatedPrice(product.price)}</p>
+                    <Button title="Adicionar ao carrinho" onClick={handleAddToCart} />
                 </div>
-            </CartProvider>
+            </div>
         </>
     );
 
