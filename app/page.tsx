@@ -14,14 +14,15 @@ import Image from 'next/image'
 register()
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination'
-import 'swiper/css/scrollbar'
-import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 export default function Home() {
 
   const [productImages, setProductImages] = useState<ProductTypes[]>([]);
-
+  const [navigations, setNavigation] = useState(true)
+  const [slidePerView, setSliderPerView] = useState(1)
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -32,17 +33,35 @@ export default function Home() {
         console.error(error);
       }
     }
+
+    const handleResize = () => {
+      if (window.innerWidth < 560) {
+        setNavigation(false)
+        setSliderPerView(1.5)
+
+      } else {
+        setNavigation(true)
+        setSliderPerView(1)
+      }
+    }
+    handleResize()
     fetchData();
+
+    window.addEventListener('resize', handleResize)
+
+    // desmontando Resize para não perder performance
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
   }, []);
+
+
+
 
   return (
     <>
       <Header />
-
-
       <Sidebar />
-
-
       <main className="main-container">
         <div className="container">
           <h1>O melhor jeito de comprar que você ama!</h1>
@@ -60,12 +79,13 @@ export default function Home() {
           />
         </div>
       </main>
+
       <main className="main-scrollImage">
         <div className="product-images-container">
           <Swiper
-            slidesPerView={1}
+            slidesPerView={slidePerView}
             pagination={true}
-            navigation
+            navigation={navigations}
           >
             {productImages.map((product, index) => (
               <SwiperSlide key={index}>

@@ -270,6 +270,7 @@ nav .logo-type:hover {
 .main-scrollImage img {
   width: 350px;
   height: 360px;
+  object-fit: contain;
 }
 
 .card-scrollImage p {
@@ -429,6 +430,8 @@ nav .logo-type:hover {
 /* MAIN RESPONSIVE */
 
 @media screen and (max-width: 1650px) {
+
+  /* MAIN CONTAINER RESPONSIVE */
   .main-container {
     margin-top: 150px;
   }
@@ -443,6 +446,8 @@ nav .logo-type:hover {
 }
 
 @media screen and (max-width: 1150px) {
+
+  /* MAIN CONTAINER RESPONSIVE */
   .main-container {
     margin-top: 150px;
     flex-direction: column-reverse;
@@ -455,43 +460,24 @@ nav .logo-type:hover {
   .container p {
     font-size: 17px;
   }
+
+  .product-item img {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+  }
+
 }
 
-
-@media screen and (max-width: 890px) {
-
-  nav {
-    flex-direction: row-reverse;
-  }
-
-  nav a {
-    display: none;
-  }
-
-  .main-container {
-    margin-top: 150px;
-  }
-
-  .container h1 {
-    font-size: 25px;
-  }
-
-  .container p {
-    font-size: 15px;
-  }
-
-  .container .btn-home {
-    font-size: 14px;
-    padding: 10px;
-  }
-}
 
 @media screen and (max-width: 926px) {
 
+  /* NAV RESPONSIVE */
   nav a {
     display: none;
   }
 
+  /* MAIN CONTAINER RESPONSIVE */
   .main-container {
     margin-top: 150px;
     flex-direction: column-reverse;
@@ -511,8 +497,75 @@ nav .logo-type:hover {
   }
 }
 
+
+@media screen and (max-width: 890px) {
+
+  /* NAV RESPONSIVE */
+  nav {
+    flex-direction: row-reverse;
+  }
+
+  nav a {
+    display: none;
+  }
+
+  /* MAIN CONTAINER RESPONSIVE */
+  .main-container {
+    margin-top: 150px;
+  }
+
+  .container h1 {
+    font-size: 25px;
+  }
+
+  .container p {
+    font-size: 15px;
+  }
+
+  .container .btn-home {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 795px) {
+  .product-images-container {
+    display: flex;
+  }
+
+  .card-scrollImage {
+    display: flex;
+  }
+
+  .product-item img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+  }
+}
+
+@media screen and (max-width: 560px) {
+
+  .product-images-container {
+    margin: 0px 0px;
+  }
+
+  .product-item img {
+    display: flex;
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+  }
+
+  .card-scrollImage p {
+    font-size: 14px;
+  }
+}
+
+
 @media screen and (max-width: 390px) {
 
+  /* NAV RESPONSIVE */
   nav {
     flex-direction: row-reverse;
   }
@@ -528,6 +581,7 @@ nav .logo-type:hover {
     font-size: 20px;
   }
 
+  /* MAIN CONTAINER RESPONSIVE */
   .main-container {
     margin-top: 150px;
     flex-direction: column-reverse;
