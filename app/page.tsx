@@ -91,7 +91,11 @@ export default function Home() {
               <SwiperSlide key={index}>
                 <div className="card-scrollImage">
                   <div className="product-item">
-                    <img src={product.image} alt={product.title} />
+                    <Link href={`/products/${product.id}`} legacyBehavior>
+                      <a>
+                        <img src={product.image} alt={product.title} />
+                      </a>
+                    </Link>
                   </div>
                   <p>{product.title}</p>
                 </div>

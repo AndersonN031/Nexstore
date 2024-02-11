@@ -290,6 +290,13 @@ nav .logo-type:hover {
   background-color: #292929 !important;
 }
 
+.card-scrollImage a img {
+  transition: .3s;
+}
+
+.card-scrollImage a img:hover {
+  transform: scale(1.05);
+}
 
 /* SECTION CONTAINER-CLOTHES */
 
@@ -553,6 +560,7 @@ nav .logo-type:hover {
   .product-item img {
     display: flex;
     width: 180px;
+    /*  */
     height: 180px;
     object-fit: contain;
   }
