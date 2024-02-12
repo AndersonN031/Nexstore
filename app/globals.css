@@ -134,7 +134,7 @@ nav .logo-type:hover {
   z-index: 999;
   cursor: pointer;
   border-radius: 0.125rem;
-  background-color: red;
+  background-color: #292929;
 }
 
 .toggle.open {
