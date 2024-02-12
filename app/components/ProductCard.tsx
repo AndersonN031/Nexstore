@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Button from './Button';
 import UseCart from '../hooks/useCartContext';
+import Sidebar from './Sidebar';
 
 const ProductCard = ({ product }: any) => {
 
@@ -21,8 +22,9 @@ const ProductCard = ({ product }: any) => {
 
     return (
         <>
-
+            <Sidebar />
             <div className="flex" key={product.id}>
+
                 <div className="card-content">
                     <div className="image-container">
                         <Link

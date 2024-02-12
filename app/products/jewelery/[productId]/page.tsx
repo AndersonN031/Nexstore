@@ -5,6 +5,7 @@ import Header from "@/app/components/Header";
 import Button from "@/app/components/Button";
 import UseCart from "@/app/hooks/useCartContext";
 import { ProductTypes } from '@/app/hooks/useProducts';
+import Sidebar from '@/app/components/Sidebar';
 
 export default function GetId({ params }: any) {
     const id = params.productId;
@@ -49,6 +50,7 @@ export default function GetId({ params }: any) {
     return (
         <>
             <Header />
+            <Sidebar />
             <div className="productDetails-container">
                 <div className="product-image">
                     <img src={productDetails.image} alt={productDetails.title} />
