@@ -6,7 +6,7 @@ import Sidebar from "@/app/components/Sidebar"
 
 export default async function JeweleryCategory() {
     try {
-        const response = await fetch("https://fakestoreapi.com/products/category/jwelery")
+        const response = await fetch("https://fakestoreapi.com/products/category/jewelery")
         const jeweleryCategory = await response.json()
         return (
             <>

@@ -34,7 +34,7 @@ export default function Sidebar() {
                 </div>
 
                 <div className='container-sidebar-jewelery'>
-                    <Link href="products/jewelery" className='link-sidebar'>
+                    <Link href="/products/jewelery" className='link-sidebar'>
                         <i className="fa-solid fa-gem"></i>
                         <p>Joias</p>
                     </Link>
