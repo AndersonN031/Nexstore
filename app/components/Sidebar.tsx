@@ -19,17 +19,24 @@ export default function Sidebar() {
             <div className={`slide${isOpen ? " open" : ""}`}>
                 <h1>MENU</h1>
 
-                <div className='container-sidebar'>
+                <div className='container-sidebar-woman'>
                     <Link href="/products/women" className='link-sidebar'>
                         <i className="fa-solid fa-person-dress"></i>
                         <p>Moda feminina</p>
                     </Link>
                 </div>
 
-                <div className='container-sidebar-two'>
+                <div className='container-sidebar-man'>
                     <Link href="/products/man" className='link-sidebar'>
                         <i className="fa-solid fa-shirt"></i>
                         <p>Moda masculina</p>
+                    </Link>
+                </div>
+
+                <div className='container-sidebar-jewelery'>
+                    <Link href="products/jewelery" className='link-sidebar'>
+                        <i className="fa-solid fa-gem"></i>
+                        <p>Joias</p>
                     </Link>
                 </div>
 
