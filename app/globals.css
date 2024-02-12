@@ -90,9 +90,8 @@ nav .logo-type:hover {
   position: fixed;
   background-color: #292929;
   color: #000;
-  transform: 0.5s ease;
-  transition: 0.3s;
   transform: translateX(-250px);
+  transition: transform 0.5s ease;
   z-index: 998;
   padding-top: 80px;
   border-top: #fff;
@@ -135,7 +134,7 @@ nav .logo-type:hover {
   z-index: 999;
   cursor: pointer;
   border-radius: 2px;
-  background-color: red;
+  background-color: #292929;
 }
 
 .toggle.open {
@@ -452,6 +451,14 @@ nav .logo-type:hover {
   }
 }
 
+@media screen and (max-width: 1300px) {
+
+  /* PRODUCTCARD RESPONSIVE */
+  .container-clothes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media screen and (max-width: 1150px) {
 
   /* MAIN CONTAINER RESPONSIVE */
@@ -533,6 +540,12 @@ nav .logo-type:hover {
     font-size: 14px;
     padding: 10px;
   }
+
+  /* PRODUCT-CARD RESPONSIVE */
+
+  .container-clothes {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media screen and (max-width: 795px) {
@@ -548,6 +561,25 @@ nav .logo-type:hover {
     width: 200px;
     height: 200px;
     object-fit: contain;
+  }
+
+  /* PRODUCT-CARD RESPONSIVE */
+
+  .card-content {
+    padding: 10px 5%;
+    gap: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .image-container img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    position: relative;
+    transition: .3s;
   }
 }
 
@@ -567,6 +599,12 @@ nav .logo-type:hover {
 
   .card-scrollImage p {
     font-size: 14px;
+  }
+
+  /*PRODUCT-CARD RESPONSIVE */
+
+  .container-clothes {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 

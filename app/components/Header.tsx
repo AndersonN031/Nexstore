@@ -1,11 +1,13 @@
 "use client"
 import Link from "next/link";
 import 'bootstrap-icons/font/bootstrap-icons.css'
+import Sidebar from "./Sidebar";
 
 export default function Header() {
     return (
         <>
             <header>
+
                 <nav>
                     <Link
                         href="/"
@@ -41,7 +43,7 @@ export default function Header() {
                     </div>
                 </nav>
             </header >
-
+            <Sidebar />
         </>
     )
 }

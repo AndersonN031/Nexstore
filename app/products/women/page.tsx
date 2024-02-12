@@ -13,7 +13,7 @@ export default async function WomenCategory() {
             <>
                 <Header />
                 <div className='container-store'>
-                    <Sidebar />
+                    {/* <Sidebar /> */}
                     <div className="container-clothes">
                         {womenCategory.map((product: { id: number }) => (
                             <ProductCard key={product.id} product={product} />
