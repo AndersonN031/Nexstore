@@ -7,7 +7,7 @@ export default function Header() {
     return (
         <>
             <header>
-
+                <Sidebar />
                 <nav>
                     <Link
                         href="/"
@@ -43,7 +43,6 @@ export default function Header() {
                     </div>
                 </nav>
             </header >
-            <Sidebar />
         </>
     )
 }

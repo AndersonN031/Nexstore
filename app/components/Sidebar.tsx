@@ -1,9 +1,9 @@
 "use client"
 import Link from 'next/link';
 import React, { useState } from 'react';
+
 export default function Sidebar() {
     const [isOpen, setIsOpen] = useState(false);
-
     const toggleSidebar = () => {
         setIsOpen(!isOpen);
     };

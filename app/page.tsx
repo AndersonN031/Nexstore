@@ -61,6 +61,7 @@ export default function Home() {
   return (
     <>
       <Header />
+      <Sidebar />
       <main className="main-container">
         <div className="container">
           <h1>O melhor jeito de comprar que você ama!</h1>

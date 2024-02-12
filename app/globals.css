@@ -86,7 +86,7 @@ nav .logo-type:hover {
   flex-direction: column;
   align-items: center;
   height: 100%;
-  width: 250px;
+  width: 15rem;
   position: fixed;
   background-color: #292929;
   color: #000;
@@ -127,10 +127,10 @@ nav .logo-type:hover {
 
 .toggle {
   position: fixed;
-  height: 45px;
-  width: 40px;
-  top: 15px;
-  left: 20px;
+  height: 2.813rem;
+  width: 2.5rem;
+  top: 0.938rem;
+  left: 1.25rem;
   z-index: 999;
   cursor: pointer;
   border-radius: 2px;
