@@ -18,22 +18,22 @@ header {
 nav {
   width: 100%;
   background-color: #292929;
-  padding: 20px 8%;
+  padding: 1.25rem 8%;
   display: flex;
   justify-content: space-between;
   font-family: "Montserrat";
   font-weight: bold;
-  font-size: 21px;
+  font-size: 1.313rem;
 }
 
 nav .nav-links {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 1.25rem;
 }
 
 nav i {
-  font-size: 30px;
+  font-size: 1.875rem;
 }
 
 nav a,
@@ -46,20 +46,20 @@ nav .logo-type {
 nav a:hover,
 nav .logo-type:hover {
   transform: scale(1.1);
-  font-size: 22;
+  font-size: 1.375rem;
   text-decoration: underline;
 }
 
 /* BTN-COMPONENT */
 
 .btn-component {
-  margin-top: 20px;
-  padding: 13px;
+  margin-top: 1.25rem;
+  padding: 0.813rem;
   background-color: #000;
   color: #fff;
   border: none;
-  border-radius: 5px;
-  font-size: 15px;
+  border-radius: 0.313rem;
+  font-size: 0.938rem;
   cursor: pointer;
   transition: .2s;
 }
@@ -81,7 +81,7 @@ nav .logo-type:hover {
 }
 
 .slide {
-  top: 0px;
+  top: 0rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -90,17 +90,17 @@ nav .logo-type:hover {
   position: fixed;
   background-color: #292929;
   color: #000;
-  transform: translateX(-250px);
+  transform: translateX(-15.625rem);
   transition: transform 0.5s ease;
   z-index: 998;
-  padding-top: 80px;
+  padding-top: 5rem;
   border-top: #fff;
 }
 
 .slide h1,
 .slide h3,
 .slide li {
-  margin: 10px 0;
+  margin: 0.625rem 0;
   color: #fff;
   font-family: sans-serif;
 }
@@ -133,7 +133,7 @@ nav .logo-type:hover {
   left: 1.25rem;
   z-index: 999;
   cursor: pointer;
-  border-radius: 2px;
+  border-radius: 0.125rem;
   background-color: red;
 }
 
@@ -148,20 +148,20 @@ nav .logo-type:hover {
 
 .toggle i {
   color: #fff;
-  font-size: 40px;
+  font-size: 2.5rem;
   text-align: justify;
 }
 
 .container-sidebar-woman .link-sidebar {
-  gap: 14px;
+  gap: 0.875rem;
 }
 
 .container-sidebar-man .link-sidebar {
-  gap: 10px;
+  gap: 0.625rem;
 }
 
 .container-sidebar-jewelery .link-sidebar {
-  gap: 12px;
+  gap: 0.75rem;
 }
 
 .container-sidebar-woman,
@@ -174,12 +174,12 @@ nav .logo-type:hover {
 .container-sidebar-man:hover,
 .container-sidebar-jewelery:hover {
   background-color: #393939;
-  border-bottom: 2px solid #ddd;
+  border-bottom: 0.125rem solid #ddd;
 
 }
 
 .container-sidebar-woman i {
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 
@@ -188,7 +188,7 @@ nav .logo-type:hover {
 .container-sidebar-jewelery .link-sidebar {
   display: flex;
   align-items: center;
-  padding: 10px 6%;
+  padding: 0.625rem 6%;
   color: #fff;
   text-decoration: none;
   transition: .2s ease;
@@ -202,7 +202,7 @@ nav .logo-type:hover {
 }
 
 .container-sidebar-man i {
-  font-size: 13px;
+  font-size: 0.813rem;
 }
 
 /* SECTION MAIN */
@@ -210,7 +210,7 @@ nav .logo-type:hover {
 .main-container {
   display: flex;
   flex-direction: row-reverse;
-  padding: 45px 8%;
+  padding: 2.813rem 8%;
   width: 100%;
   box-sizing: border-box;
 }
@@ -268,7 +268,7 @@ nav .logo-type:hover {
 }
 
 .card-scrollImage {
-  padding: 40px;
+  padding: 3.125rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -276,8 +276,8 @@ nav .logo-type:hover {
 }
 
 .main-scrollImage img {
-  width: 350px;
-  height: 360px;
+  width: 21.875rem;
+  height: 22.5rem;
   object-fit: contain;
 }
 
