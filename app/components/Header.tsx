@@ -6,7 +6,7 @@ import Sidebar from "./Sidebar";
 export default function Header() {
     return (
         <>
-            <Sidebar />
+            {/* <Sidebar /> */}
             <header>
                 <nav>
                     <Link

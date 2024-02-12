@@ -1,6 +1,7 @@
 "use client"
 
 import Header from '@/app/components/Header';
+import Sidebar from '@/app/components/Sidebar';
 import { ProductTypes } from '@/app/hooks/useProducts';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
@@ -27,9 +28,9 @@ export default function JewelryCategory() {
         <>
             <Header />
             <div className='container-store'>
-                {/* <Sidebar /> */}
+                <Sidebar />
                 <div className="container-clothes">
-                    
+
                     {jewelryCategory && jewelryCategory.map((product) => (
                         <div className="flex" key={product.id}>
                             <div className="card-content">
