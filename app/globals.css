@@ -10,7 +10,7 @@
 
 header {
   position: fixed;
-  /* width: 100%; */
+  width: 100%;
   z-index: 999;
 }
 
@@ -328,12 +328,12 @@ nav .logo-type:hover {
 }
 
 .card-content {
-  border: 1px solid #ddd;
+  border: 0.063rem solid #ddd;
   background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 20px 5%;
-  gap: 20px;
+  border-radius: 0.625rem;
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+  padding: 1.25rem 5%;
+  gap: 1.25rem;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -347,13 +347,13 @@ nav .logo-type:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 1.25rem;
 }
 
 
 .image-container img {
-  width: 200px;
-  height: 200px;
+  width: 12.5rem;
+  height: 12.5rem;
   object-fit: contain;
   position: relative;
   transition: .3s;
@@ -377,7 +377,7 @@ nav .logo-type:hover {
 
 .overlay p {
   color: white;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
 }
 
@@ -386,7 +386,7 @@ nav .logo-type:hover {
 }
 
 .overlay i {
-  font-size: 30px;
+  font-size: 1.875rem;
   color: white;
 }
 
@@ -403,9 +403,9 @@ nav .logo-type:hover {
 .card-content button {
   background-color: #292929;
   color: #fff;
-  padding: 15px;
+  padding: 0.938rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.313rem;
   cursor: pointer;
   transition: .2s;
 }
