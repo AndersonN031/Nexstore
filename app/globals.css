@@ -687,9 +687,6 @@ nav .logo-type:hover {
     flex-direction: row-reverse;
   }
 
-  .toggle {
-    display: none;
-  }
 
   nav .logo-type {
     display: flex;
