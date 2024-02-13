@@ -1,21 +1,24 @@
 "use client"
 
+import Button from '@/app/components/Button';
 import Header from '@/app/components/Header';
 import Sidebar from '@/app/components/Sidebar';
+import UseCart from '@/app/hooks/useCartContext';
 import { ProductTypes } from '@/app/hooks/useProducts';
+import formatedPrice from '@/app/services/service';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-// Assuming you have a Header component
 
-export default function JewelryCategory() {
-    const [jewelryCategory, setJewelryCategory] = useState<ProductTypes[] | undefined>();
+export default function JeweleryCategory({ product }: any) {
+    const [jeweleryCategory, setJewelryCategory] = useState<ProductTypes[] | undefined>();
+    const { addToCart } = UseCart()
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const response = await fetch("https://fakestoreapi.com/products/category/jewelery");
-                const jewelryData = await response.json();
-                setJewelryCategory(jewelryData);
+                const jeweleryData = await response.json();
+                setJewelryCategory(jeweleryData);
             } catch (error) {
                 console.error("Erro ao buscar detalhes do produto.", error);
             }
@@ -24,6 +27,11 @@ export default function JewelryCategory() {
         fetchData();
     }, []);
 
+    const handleAddToCart = () => {
+        addToCart(product)
+        alert('Produto adicionato ao carrinho!')
+    }
+
     return (
         <>
             <Header />
@@ -31,7 +39,7 @@ export default function JewelryCategory() {
                 <Sidebar />
                 <div className="container-clothes">
 
-                    {jewelryCategory && jewelryCategory.map((product) => (
+                    {jeweleryCategory && jeweleryCategory.map((product) => (
                         <div className="flex" key={product.id}>
                             <div className="card-content">
                                 <div className="image-container">
@@ -46,7 +54,8 @@ export default function JewelryCategory() {
                                     </Link>
                                 </div>
                                 <p className="text-title">{product.title}</p>
-
+                                <p className="price-product">{formatedPrice(product.price)}</p>
+                                <Button title='Adicionar ao carrinho' onClick={handleAddToCart} />
                             </div>
                         </div>
                     ))}

@@ -1,44 +1,44 @@
 "use client"
 
-import { useEffect, useState } from 'react';
-import Header from "@/app/components/Header";
 import Button from "@/app/components/Button";
+import Header from "@/app/components/Header";
+import Sidebar from "@/app/components/Sidebar";
 import UseCart from "@/app/hooks/useCartContext";
-import { ProductTypes } from '@/app/hooks/useProducts';
-import Sidebar from '@/app/components/Sidebar';
-import formatedPrice from '@/app/services/service';
+import { ProductTypes } from "@/app/hooks/useProducts";
+import formatedPrice from "@/app/services/service";
+import { useEffect, useState } from "react";
 
 export default function GetIdManCategory({ params }: any) {
     const id = params.productId;
-    const { addToCart } = UseCart();
-    const [productDetails, setProductDetails] = useState<ProductTypes>();
+    const { addToCart } = UseCart()
+    const [productDetails, setProductDetails] = useState<ProductTypes>()
 
     useEffect(() => {
-        // criando uma arrow function para pegar o id do produto específico
         const fetchData = async () => {
             try {
-                const response = await fetch(`https://fakestoreapi.com/products/${id}`);
-                const productDetailsData = await response.json();
-                setProductDetails(productDetailsData);
+                const response = await fetch(`https://fakestoreapi.com/products/${id}`)
+                const productDetailsData = await response.json()
+                setProductDetails(productDetailsData)
             } catch (error) {
-                console.error('Erro ao buscar detalhes do produto:', error);
+                console.error('Erro ao buscar detalhes do produto:', error)
             }
-        };
+        }
 
-        fetchData();
-    }, [id]);
+        fetchData()
+    }, [id])
 
     const handleAddToCart = () => {
         if (productDetails) {
-            addToCart(productDetails);
-            alert('Produto adicionado ao carrinho!');
+            addToCart(productDetails)
+            alert('Produto adicionado ao carrinho!')
+
         } else {
-            console.error('Detalhes do produto não estão disponíveis.');
+            console.error('Detalhes do produto não estão disponíveis.')
         }
-    };
+    }
 
     if (!productDetails) {
-        return null; // ou algum indicador de carregamento, dependendo do seu design
+        return null // ou algum indicador de carregamento, dependendo do seu design
     }
 
     return (
@@ -58,5 +58,5 @@ export default function GetIdManCategory({ params }: any) {
                 </div>
             </div>
         </>
-    );
+    )
 }

@@ -5,6 +5,7 @@ import Header from "@/app/components/Header";
 import Button from "@/app/components/Button";
 import UseCart from "@/app/hooks/useCartContext";
 import { ProductTypes } from '@/app/hooks/useProducts';
+import formatedPrice from '@/app/services/service';
 
 export default function GetId({ params }: any) {
     const id = params.productId;
@@ -37,13 +38,6 @@ export default function GetId({ params }: any) {
 
     if (!productDetails) {
         return null; // ou algum indicador de carregamento, dependendo do seu design
-    }
-
-    const formatedPrice = (price: number) => {
-        return price.toLocaleString('pt-BR', {
-            style: 'currency',
-            currency: 'BRL'
-        })
     }
 
     return (

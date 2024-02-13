@@ -447,9 +447,6 @@ nav .logo-type:hover {
 @media screen and (max-width: 1650px) {
 
   /* MAIN CONTAINER RESPONSIVE */
-  .main-container {
-    margin-top: 150px;
-  }
 
   .container h1 {
     font-size: 30px;
@@ -484,7 +481,6 @@ nav .logo-type:hover {
 
   /* MAIN CONTAINER RESPONSIVE */
   .main-container {
-    margin-top: 150px;
     flex-direction: column-reverse;
   }
 
@@ -536,7 +532,6 @@ nav .logo-type:hover {
 
   /* MAIN CONTAINER RESPONSIVE */
   .main-container {
-    margin-top: 150px;
     flex-direction: column-reverse;
   }
 
@@ -567,10 +562,6 @@ nav .logo-type:hover {
   }
 
   /* MAIN CONTAINER RESPONSIVE */
-  .main-container {
-    margin-top: 150px;
-  }
-
   .container h1 {
     font-size: 25px;
   }
@@ -713,7 +704,6 @@ nav .logo-type:hover {
 
   /* MAIN CONTAINER RESPONSIVE */
   .main-container {
-    margin-top: 150px;
     flex-direction: column-reverse;
   }
 
