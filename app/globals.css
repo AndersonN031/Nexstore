@@ -445,12 +445,10 @@ nav .logo-type:hover {
 /* SECTION CART */
 
 .main-table {
-  margin-top: 250px;
   padding: 0px 10%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   flex-direction: column;
   /* Ocupa 100% da altura da tela */
 }
