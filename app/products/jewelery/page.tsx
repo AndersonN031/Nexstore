@@ -10,7 +10,7 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 
 export default function JeweleryCategory({ product }: any) {
-    const [jeweleryCategory, setJewelryCategory] = useState<ProductTypes[] | undefined>();
+    const [jeweleryCategory, setJewelryCategory] = useState<ProductTypes[]>();
     const { addToCart } = UseCart()
 
     useEffect(() => {
@@ -27,7 +27,7 @@ export default function JeweleryCategory({ product }: any) {
         fetchData();
     }, []);
 
-    const handleAddToCart = () => {
+    const handleAddToCart = (product: ProductTypes) => {
         addToCart(product)
         alert('Produto adicionato ao carrinho!')
     }
@@ -55,7 +55,7 @@ export default function JeweleryCategory({ product }: any) {
                                 </div>
                                 <p className="text-title">{product.title}</p>
                                 <p className="price-product">{formatedPrice(product.price)}</p>
-                                <Button title='Adicionar ao carrinho' onClick={handleAddToCart} />
+                                <Button title='Adicionar ao carrinho' onClick={() => handleAddToCart(product)} />
                             </div>
                         </div>
                     ))}
