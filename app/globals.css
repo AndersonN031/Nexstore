@@ -444,6 +444,10 @@ nav .logo-type:hover {
 
 /* SECTION CART */
 
+.main-cart {
+  margin-top: 10rem;
+}
+
 .main-table {
   padding: 0px 10%;
   display: flex;

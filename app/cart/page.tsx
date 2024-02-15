@@ -47,7 +47,7 @@ export default function Cart() {
         <>
             <Header />
             <Sidebar />
-            <div className="main-cart">
+            <main className="main-cart">
                 <ul className="main-table">
                     <div className="icon-container">
                         <i className="bi bi-cart-fill"></i>
@@ -79,7 +79,7 @@ export default function Cart() {
                         </tbody>
                     </table>
                 </ul>
-            </div>
+            </main>
         </>
     )
 }
