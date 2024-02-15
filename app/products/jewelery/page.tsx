@@ -9,7 +9,7 @@ import formatedPrice from '@/app/services/service';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 
-export default function JeweleryCategory({ product }: any) {
+export default function JeweleryCategory() {
     const [jeweleryCategory, setJewelryCategory] = useState<ProductTypes[]>();
     const { addToCart } = UseCart()
 

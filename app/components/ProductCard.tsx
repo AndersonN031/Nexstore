@@ -20,7 +20,7 @@ const ProductCard = ({ product }: any) => {
                 <div className="card-content">
                     <div className="image-container">
                         <Link
-                            href={`/products/${product.id}`}
+                            href={`/products/jewelery/` ? `/products/jewelery/${product.id}` : `products/${product.id}`}
                             passHref
                         >
                             <img src={product.image} alt={product.title} />

@@ -52,8 +52,10 @@ export default function GetIdWomenCategory({ params }: any) {
 
                 <div className="product-info">
                     <h1>{productDetails.title}</h1>
-                    <p>{productDetails.description}</p>
+                    <p className='description-product'>{productDetails.description}</p>
+                    <p className='old-price'>{formatedPrice((productDetails.price * 0.15) + productDetails.price)}</p>
                     <p className="price-product">{formatedPrice(productDetails.price)}</p>
+                    <p className='price-installments'>ou <span>4x</span> de <span> {formatedPrice(productDetails.price / 4)} <i className="bi bi-credit-card"></i></span> sem juros</p>
                     <Button title="Compre agora" onClick={handleAddToCart} />
                 </div>
             </div>

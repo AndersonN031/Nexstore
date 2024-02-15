@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 /* SECTION HEADER */
@@ -21,7 +22,6 @@ nav {
   padding: 1.25rem 8%;
   display: flex;
   justify-content: space-between;
-  font-family: "Montserrat";
   font-weight: bold;
   font-size: 1.313rem;
 }
@@ -227,13 +227,11 @@ nav .logo-type:hover {
 
 .container h1 {
   margin: 20px auto;
-  font-family: 'Montserrat', sans-serif;
   font-size: 50px;
 }
 
 .container p {
   text-align: center;
-  font-family: 'Roboto', sans-serif;
   font-size: 20px;
 }
 
@@ -283,7 +281,6 @@ nav .logo-type:hover {
 
 .card-scrollImage p {
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
   font-size: 19px;
   padding-top: 40px;
 }
@@ -392,13 +389,9 @@ nav .logo-type:hover {
 
 
 .text-title {
-  font-family: "Montserrat", sans-serif;
   font-weight: bold;
 }
 
-.text-price {
-  font-family: "Roboto", sans-serif;
-}
 
 .card-content button {
   background-color: #292929;
@@ -429,18 +422,56 @@ nav .logo-type:hover {
 }
 
 .product-info h1,
-.product-info p {
+.description-product {
   padding: 10px 0;
+}
+
+.description-product {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
 }
 
 .product-info p {
   font-size: 14px;
 }
 
+.product-info .old-price {
+  font-size: 14px;
+  text-decoration: line-through;
+}
+
 .product-info .price-product {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
 }
+
+
+.price-installments span {
+  font-weight: bold;
+}
+
+.freight {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+  background-color: #B4E4C8;
+  margin-right: 80%;
+  margin-top: 1.2rem;
+  padding: 0px 1%;
+  text-align: center;
+  border-radius: 5px;
+
+}
+
+.freight i {
+  font-size: 30px;
+}
+
+.product-info .freight p {
+  font-size: 15px;
+}
+
 
 /* SECTION CART */
 
@@ -479,13 +510,13 @@ nav .logo-type:hover {
 }
 
 .ecommerce-table th {
-  border-bottom: 1px solid #393939;
+  border-bottom: 1px solid #ddd;
   padding: 10px;
   text-align: left;
 }
 
 .ecommerce-table td {
-  border-bottom: 1px solid #393939;
+  border-bottom: 1px solid #ddd;
   padding: 18px 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 400;
@@ -509,6 +540,50 @@ nav .logo-type:hover {
 .ecommerce-table tbody tr:nth-child(even) {
   background-color: #fff;
 }
+
+
+.cart-quantity .btn-more,
+.cart-quantity .btn-less {
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+  padding: 0 5%;
+}
+
+.cart-quantity .btn-more:hover,
+.cart-quantity .btn-less:hover {
+  transform: scale(1.05);
+  background-color: #ddd;
+  color: #393939;
+  border-radius: 5px;
+}
+
+.cart-quantity span {
+  font-size: 18px;
+}
+
+.container-total-price {
+  display: flex;
+  justify-content: end;
+  margin-right: 21.3rem;
+
+}
+
+
+.container-total-price p {
+  font-size: 19px;
+  font-weight: bold;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.container-total-price span {
+  color: #6BBE45;
+
+}
+
 
 /* MAIN RESPONSIVE */
 

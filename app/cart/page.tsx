@@ -68,17 +68,25 @@ export default function Cart() {
 
                                     <td className="td-img-title"><img src={cartItem.product.image} alt="" /> {cartItem.product.title} </td>
                                     <td>{formatedPrice(cartItem.product.price)}</td>
-                                    <td className="cart-quantity">{cartItem.quantity}</td>
-                                    <td>{formatedPrice(cartItem.quantity * cartItem.product.price)}</td>
-                                    <td>
-                                        <button onClick={() => handleAddProduct(cartItem.product.id)}>+</button>
-                                        <button onClick={() => handleRemoveProduct(cartItem.product.id)}>-</button>
+
+                                    <td className="cart-quantity">
+                                        <button className="btn-more" onClick={() => handleAddProduct(cartItem.product.id)}>+</button>
+                                        <span>{cartItem.quantity}</span>
+                                        <button className="btn-less" onClick={() => handleRemoveProduct(cartItem.product.id)}>-</button>
                                     </td>
+                                    <td>{formatedPrice(cartItem.quantity * cartItem.product.price)}</td>
                                 </tr>
                             ))}
                         </tbody>
                     </table>
                 </ul>
+                <div className="container-total-price">
+                    <p>
+                        Total:<span> {formatedPrice(cart.reduce((total, item) => total + item.quantity * item.product.price, 0))}</span>
+                    </p>
+                </div>
+
+
             </main>
         </>
     )
