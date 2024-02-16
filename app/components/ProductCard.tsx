@@ -1,9 +1,9 @@
+
 import Link from 'next/link';
-import Button from './Button';
+import Button from './ButtonComponent';
 import formatedPrice from '../services/service';
 import UseCart from '../hooks/useCartContext';
-
-
+import notify from './ToastifyComponent';
 
 
 const ProductCard = ({ product }: any) => {
@@ -11,7 +11,7 @@ const ProductCard = ({ product }: any) => {
 
     const handleAddToCart = () => {
         addToCart(product)
-        alert('Produto adicionato ao carrinho!')
+        notify()
     }
 
     return (
@@ -20,7 +20,7 @@ const ProductCard = ({ product }: any) => {
                 <div className="card-content">
                     <div className="image-container">
                         <Link
-                            href={`/products/jewelery/` ? `/products/jewelery/${product.id}` : `products/${product.id}`}
+                            href={`/products/${product.category === 'jewelery' ? 'jewelery/' : ''}${product.id}`}
                             passHref
                         >
                             <img src={product.image} alt={product.title} />
@@ -30,7 +30,10 @@ const ProductCard = ({ product }: any) => {
                         </Link>
                     </div>
                     <p className="text-title">{product.title}</p>
-                    <p className="text-price">{formatedPrice(product.price)}</p>
+                    <p className="text-price">
+                        {formatedPrice(product.price)}
+                        {product.price > 100 ? <span> Frete grátis</span> : ''}
+                    </p>
                     <Button title="Adicionar ao carrinho" onClick={handleAddToCart} />
                 </div>
             </div>

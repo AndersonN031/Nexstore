@@ -1,10 +1,9 @@
 "use client"
 import "@fontsource/montserrat"
-import Header from "../components/Header";
+import Header from "../components/HeaderComponent";
 import Sidebar from "../components/Sidebar";
 import useCart from "../hooks/useCartContext";
 import formatedPrice from "../services/service";
-
 
 
 export default function Cart() {

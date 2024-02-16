@@ -1,18 +1,19 @@
 "use client"
-
-import Button from "@/app/components/Button"
-import Header from "@/app/components/Header"
+import Button from "@/app/components/ButtonComponent"
+import Header from "@/app/components/HeaderComponent"
 import Sidebar from "@/app/components/Sidebar"
 import UseCart from "@/app/hooks/useCartContext"
 import { ProductTypes } from "@/app/hooks/useProducts"
 import formatedPrice from "@/app/services/service"
 import Link from "next/link"
 import { useEffect, useState } from "react"
+import { ToastContainer } from "react-toastify"
+import notify from '@/app/components/ToastifyComponent';
 
-export default function WomenCategory({ product }: any) {
+export default function WomenCategory() {
     const [womanCategory, setWomenCategory] = useState<ProductTypes[]>()
-    const { addToCart } = UseCart()
 
+    const { addToCart } = UseCart()
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -26,14 +27,17 @@ export default function WomenCategory({ product }: any) {
         fetchData()
     }, [])
 
+
     const handleAddToCart = (product: ProductTypes) => {
         addToCart(product)
-        alert('Produto adicionado ao carrinho!')
+        notify()
     }
+
 
     return (
         <>
             <Header />
+            <ToastContainer />
             <div className='container-store'>
                 <Sidebar />
                 <div className="container-clothes">
@@ -54,6 +58,7 @@ export default function WomenCategory({ product }: any) {
                                 <p className="text-title">{product.title}</p>
                                 <p className="price-product">{formatedPrice(product.price)}</p>
                                 <Button title='Adicionar ao carrinho' onClick={() => handleAddToCart(product)} />
+
                             </div>
                         </div>
                     ))}

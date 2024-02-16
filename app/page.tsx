@@ -1,6 +1,6 @@
 "use client"
 
-import Header from "./components/Header";
+import Header from "./components/HeaderComponent";
 import "@fontsource/montserrat"
 import "@fontsource/roboto"
 import Link from "next/link";

@@ -1,11 +1,13 @@
 "use client"
 
 import { useEffect, useState } from 'react';
-import Header from "@/app/components/Header";
-import Button from "@/app/components/Button";
+import Header from "@/app/components/HeaderComponent";
+import Button from "@/app/components/ButtonComponent";
 import UseCart from "@/app/hooks/useCartContext";
 import { ProductTypes } from '@/app/hooks/useProducts';
 import formatedPrice from '@/app/services/service';
+import notify, { notifyError } from '@/app/components/ToastifyComponent';
+import { Bounce, ToastContainer, toast } from 'react-toastify';
 
 export default function GetId({ params }: any) {
     const id = params.productId;
@@ -27,12 +29,13 @@ export default function GetId({ params }: any) {
         fetchData();
     }, [id]);
 
+
     const handleAddToCart = () => {
         if (productDetails) {
             addToCart(productDetails);
-            alert('Produto adicionado ao carrinho!');
+            notify()
         } else {
-            console.error('Detalhes do produto não estão disponíveis.');
+            notifyError()
         }
     };
 
@@ -42,6 +45,7 @@ export default function GetId({ params }: any) {
 
     return (
         <>
+            <ToastContainer />
             <Header />
             <div className="productDetails-container">
                 <div className="product-image">
@@ -54,6 +58,10 @@ export default function GetId({ params }: any) {
                     <p className='old-price'>{formatedPrice((productDetails.price * 0.15) + productDetails.price)}</p>
                     <p className="price-product">{formatedPrice(productDetails.price)}</p>
                     <p className='price-installments'>ou <span>4x</span> de <span> {formatedPrice(productDetails.price / 4)} <i className="bi bi-credit-card"></i></span> sem juros</p>
+                    <div className='freight'>
+                        <i className="bi bi-truck"></i>
+                        <p>Frete grátis</p>
+                    </div>
                     <Button title="Compre agora" onClick={handleAddToCart} />
                 </div>
             </div>

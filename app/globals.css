@@ -392,6 +392,12 @@ nav .logo-type:hover {
   font-weight: bold;
 }
 
+.text-price span {
+  font-size: 13px;
+  font-weight: bold;
+  color: #B0E57C;
+}
+
 
 .card-content button {
   background-color: #292929;
@@ -441,10 +447,15 @@ nav .logo-type:hover {
 }
 
 .product-info .price-product {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
 }
 
+.price-product span {
+  font-size: 13px;
+  font-weight: bold;
+  color: #B0E57C;
+}
 
 .price-installments span {
   font-weight: bold;
@@ -452,24 +463,11 @@ nav .logo-type:hover {
 
 .freight {
   display: flex;
-  justify-content: start;
-  align-items: center;
-  gap: 20px;
-  background-color: #B4E4C8;
-  margin-right: 80%;
-  margin-top: 1.2rem;
-  padding: 0px 1%;
-  text-align: center;
+  background-color: #B0E57C;
   border-radius: 5px;
-
-}
-
-.freight i {
-  font-size: 30px;
-}
-
-.product-info .freight p {
-  font-size: 15px;
+  max-width: 15%;
+  padding: 5px;
+  gap: 5px;
 }
 
 
@@ -600,6 +598,13 @@ nav .logo-type:hover {
   }
 }
 
+@media screen and (max-width: 1593px) {
+  .freight {
+    max-width: 16%;
+
+  }
+}
+
 @media screen and (max-width: 1586px) {
 
   /* ITEM-DETAILS RESPONSIVE*/
@@ -609,6 +614,18 @@ nav .logo-type:hover {
     align-items: center;
     padding: 200px 5%;
     gap: 80px;
+  }
+
+  .freight {
+    max-width: 10%;
+
+  }
+}
+
+@media screen and (max-width: 1492px) {
+  .freight {
+    max-width: 15%;
+
   }
 }
 
@@ -663,6 +680,16 @@ nav .logo-type:hover {
     font-size: 13px;
   }
 
+  .freight {
+    max-width: 15%;
+  }
+
+}
+
+@media screen and (max-width: 1085px) {
+  .freight {
+    max-width: 20%;
+  }
 }
 
 
@@ -689,6 +716,10 @@ nav .logo-type:hover {
   .container .btn-home {
     font-size: 14px;
     padding: 10px;
+  }
+
+  .freight {
+    max-width: 25%;
   }
 }
 
@@ -781,6 +812,21 @@ nav .logo-type:hover {
   .product-info p {
     font-size: 12px;
   }
+
+}
+
+@media screen and (max-width: 724px) {
+  .freight {
+    max-width: 30%;
+  }
+
+}
+
+@media screen and (max-width: 656px) {
+  .freight {
+    max-width: 35%;
+  }
+
 }
 
 @media screen and (max-width: 638px) {

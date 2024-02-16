@@ -37,7 +37,7 @@ export default function Header() {
                             className="link"
                         >
                             <a className="nav-link">
-                                <i className="bi bi-bag"></i>
+                                <i className="bi bi-cart"></i>
                             </a>
                         </Link>
                     </div>

@@ -1,13 +1,15 @@
 "use client"
 
-import Button from '@/app/components/Button';
-import Header from '@/app/components/Header';
+import Button from '@/app/components/ButtonComponent';
+import Header from '@/app/components/HeaderComponent';
 import Sidebar from '@/app/components/Sidebar';
+import notify from '@/app/components/ToastifyComponent';
 import UseCart from '@/app/hooks/useCartContext';
 import { ProductTypes } from '@/app/hooks/useProducts';
 import formatedPrice from '@/app/services/service';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
+import { ToastContainer } from 'react-toastify';
 
 export default function JeweleryCategory() {
     const [jeweleryCategory, setJewelryCategory] = useState<ProductTypes[]>();
@@ -29,12 +31,13 @@ export default function JeweleryCategory() {
 
     const handleAddToCart = (product: ProductTypes) => {
         addToCart(product)
-        alert('Produto adicionato ao carrinho!')
+        notify()
     }
 
     return (
         <>
             <Header />
+            <ToastContainer />
             <div className='container-store'>
                 <Sidebar />
                 <div className="container-clothes">
@@ -54,7 +57,10 @@ export default function JeweleryCategory() {
                                     </Link>
                                 </div>
                                 <p className="text-title">{product.title}</p>
-                                <p className="price-product">{formatedPrice(product.price)}</p>
+                                <p className="price-product">
+                                    {formatedPrice(product.price)}
+                                    {product.price > 100 ? <span> Frete grátis</span> : ''}
+                                </p>
                                 <Button title='Adicionar ao carrinho' onClick={() => handleAddToCart(product)} />
                             </div>
                         </div>

@@ -1,15 +1,17 @@
 "use client"
 
-import Button from "@/app/components/Button"
-import Header from "@/app/components/Header"
+import Button from "@/app/components/ButtonComponent"
+import Header from "@/app/components/HeaderComponent"
 import Sidebar from "@/app/components/Sidebar"
+import notify from "@/app/components/ToastifyComponent"
 import UseCart from "@/app/hooks/useCartContext"
 import { ProductTypes } from "@/app/hooks/useProducts"
 import formatedPrice from "@/app/services/service"
 import Link from "next/link"
 import { useEffect, useState } from "react"
+import { ToastContainer } from "react-toastify"
 
-export default function ManCategory({ product }: any) {
+export default function ManCategory() {
     const [manCategory, setManCategory] = useState<ProductTypes[]>()
     const { addToCart } = UseCart()
 
@@ -29,12 +31,13 @@ export default function ManCategory({ product }: any) {
 
     const handleAddToCart = (product: ProductTypes) => {
         addToCart(product)
-        alert('Produto adicionado ao carrinho!')
+        notify()
     }
 
     return (
         <>
             <Header />
+            <ToastContainer />
             <div className='container-store'>
                 <Sidebar />
                 <div className="container-clothes">

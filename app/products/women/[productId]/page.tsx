@@ -1,12 +1,14 @@
 "use client"
 
-import Button from "@/app/components/Button";
-import Header from "@/app/components/Header";
+import Button from "@/app/components/ButtonComponent";
+import Header from "@/app/components/HeaderComponent";
 import Sidebar from "@/app/components/Sidebar";
+import notify, { notifyError } from "@/app/components/ToastifyComponent";
 import UseCart from "@/app/hooks/useCartContext";
 import { ProductTypes } from "@/app/hooks/useProducts";
 import formatedPrice from "@/app/services/service";
 import { useEffect, useState } from "react";
+import { ToastContainer } from "react-toastify";
 
 export default function GetIdWomenCategory({ params }: any) {
     const id = params.productId;
@@ -30,10 +32,10 @@ export default function GetIdWomenCategory({ params }: any) {
     const handleAddToCart = () => {
         if (productDetails) {
             addToCart(productDetails)
-            alert('Produto adicionado ao carrinho!')
+            notify()
 
         } else {
-            console.error('Detalhes do produto não estão disponíveis.')
+            notifyError()
         }
     }
 
@@ -45,6 +47,7 @@ export default function GetIdWomenCategory({ params }: any) {
         <>
             <Header />
             <Sidebar />
+            <ToastContainer />
             <div className="productDetails-container">
                 <div className="product-image">
                     <img src={productDetails.image} alt={productDetails.title} />
