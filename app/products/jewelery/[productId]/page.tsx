@@ -59,10 +59,11 @@ export default function GetIdManCategory({ params }: any) {
                     <p className='old-price'>{formatedPrice((productDetails.price * 0.15) + productDetails.price)}</p>
                     <p className="price-product">{formatedPrice(productDetails.price)}</p>
                     <p className='price-installments'>ou <span>4x</span> de <span> {formatedPrice(productDetails.price / 4)} <i className="bi bi-credit-card"></i></span> sem juros</p>
-                    <div className='freight'>
+                    {productDetails.price > 100 ? <div className='freight'>
                         <i className="bi bi-truck"></i>
                         <p>Frete grátis</p>
-                    </div>
+                    </div> : ''}
+
                     <Button title="Compre agora" onClick={handleAddToCart} />
                 </div>
             </div>
