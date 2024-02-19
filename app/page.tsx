@@ -4,7 +4,7 @@ import Header from "./components/HeaderComponent";
 import "@fontsource/montserrat"
 import "@fontsource/roboto"
 import Link from "next/link";
-import Sidebar from "./components/Sidebar";
+import Sidebar from "./components/SidebarComponent";
 import { useEffect, useState } from "react";
 import { ProductTypes } from "./hooks/useProducts";
 import { register } from 'swiper/element/bundle'

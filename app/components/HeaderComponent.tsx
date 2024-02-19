@@ -1,7 +1,7 @@
 "use client"
 import Link from "next/link";
 import 'bootstrap-icons/font/bootstrap-icons.css'
-import Sidebar from "./Sidebar";
+import Sidebar from "./SidebarComponent";
 
 export default function Header() {
     return (

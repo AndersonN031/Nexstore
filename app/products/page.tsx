@@ -1,7 +1,7 @@
 "use client"
 import Header from "../components/HeaderComponent";
-import ProductCard from "../components/ProductCard";
-import Sidebar from "../components/Sidebar";
+import ProductCard from "../components/ProductCardComponent";
+import Sidebar from "../components/SidebarComponent";
 import UseProduct from "../hooks/useProducts";
 import { ToastContainer } from 'react-toastify';
 

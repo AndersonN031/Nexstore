@@ -1,7 +1,7 @@
 "use client"
 import Button from "@/app/components/ButtonComponent"
 import Header from "@/app/components/HeaderComponent"
-import Sidebar from "@/app/components/Sidebar"
+import Sidebar from "@/app/components/SidebarComponent"
 import UseCart from "@/app/hooks/useCartContext"
 import { ProductTypes } from "@/app/hooks/useProducts"
 import formatedPrice from "@/app/services/service"
@@ -39,7 +39,7 @@ export default function WomenCategory() {
             <Header />
             <ToastContainer />
             <div className='container-store'>
-                <Sidebar />
+                {/* <Sidebar /> */}
                 <div className="container-clothes">
                     {womanCategory && womanCategory.map((product) => (
                         <div className="flex" key={product.id}>

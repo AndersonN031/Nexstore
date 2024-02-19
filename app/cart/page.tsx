@@ -1,7 +1,7 @@
 "use client"
 import "@fontsource/montserrat"
 import Header from "../components/HeaderComponent";
-import Sidebar from "../components/Sidebar";
+import Sidebar from "../components/SidebarComponent";
 import useCart from "../hooks/useCartContext";
 import formatedPrice from "../services/service";
 

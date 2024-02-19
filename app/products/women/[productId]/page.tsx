@@ -2,7 +2,7 @@
 
 import Button from "@/app/components/ButtonComponent";
 import Header from "@/app/components/HeaderComponent";
-import Sidebar from "@/app/components/Sidebar";
+import Sidebar from "@/app/components/SidebarComponent";
 import notify, { notifyError } from "@/app/components/ToastifyComponent";
 import UseCart from "@/app/hooks/useCartContext";
 import { ProductTypes } from "@/app/hooks/useProducts";
@@ -46,7 +46,7 @@ export default function GetIdWomenCategory({ params }: any) {
     return (
         <>
             <Header />
-            <Sidebar />
+            {/* <Sidebar /> */}
             <ToastContainer />
             <div className="productDetails-container">
                 <div className="product-image">

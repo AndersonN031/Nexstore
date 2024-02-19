@@ -2,7 +2,6 @@
 
 import Button from '@/app/components/ButtonComponent';
 import Header from '@/app/components/HeaderComponent';
-import Sidebar from '@/app/components/Sidebar';
 import notify from '@/app/components/ToastifyComponent';
 import UseCart from '@/app/hooks/useCartContext';
 import { ProductTypes } from '@/app/hooks/useProducts';
@@ -39,7 +38,7 @@ export default function JeweleryCategory() {
             <Header />
             <ToastContainer />
             <div className='container-store'>
-                <Sidebar />
+                {/* <Sidebar /> */}
                 <div className="container-clothes">
 
                     {jeweleryCategory && jeweleryCategory.map((product) => (
