@@ -109,7 +109,6 @@ nav .logo-type:hover {
   list-style-type: none;
 }
 
-
 .slide ul {
   text-align: start;
   padding-right: 6rem;
@@ -123,7 +122,6 @@ nav .logo-type:hover {
 .container-toggle input:checked~.slide {
   transform: translateX(0);
 }
-
 
 .toggle {
   position: fixed;
@@ -152,6 +150,12 @@ nav .logo-type:hover {
   text-align: justify;
 }
 
+.slide h1 {
+  border-bottom: 2px solid #ddd;
+  border-top: 2px solid #ddd;
+  padding: 0px 3.6rem;
+}
+
 .container-sidebar-woman .link-sidebar {
   gap: 0.875rem;
 }
@@ -164,15 +168,33 @@ nav .logo-type:hover {
   gap: 0.75rem;
 }
 
+.container-sidebar-products .link-sidebar {
+  gap: 0.75rem;
+}
+
+.container-sidebar-cart .link-sidebar {
+  /* gap: 0.75rem; */
+}
+
 .container-sidebar-woman,
 .container-sidebar-man,
-.container-sidebar-jewelery {
+.container-sidebar-jewelery,
+.container-sidebar-products {
   width: 100%;
+}
+
+.container-sidebar-cart {
+  width: 80%;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  margin-top: 2rem;
 }
 
 .container-sidebar-woman:hover,
 .container-sidebar-man:hover,
-.container-sidebar-jewelery:hover {
+.container-sidebar-jewelery:hover,
+.container-sidebar-products:hover,
+.container-sidebar-cart:hover {
   background-color: #393939;
   border-bottom: 0.125rem solid #ddd;
 
@@ -182,10 +204,10 @@ nav .logo-type:hover {
   font-size: 1.25rem;
 }
 
-
 .container-sidebar-woman .link-sidebar,
 .container-sidebar-man .link-sidebar,
-.container-sidebar-jewelery .link-sidebar {
+.container-sidebar-jewelery .link-sidebar,
+.container-sidebar-products .link-sidebar {
   display: flex;
   align-items: center;
   padding: 0.625rem 6%;
@@ -194,16 +216,33 @@ nav .logo-type:hover {
   transition: .2s ease;
 }
 
+.container-sidebar-cart .link-sidebar {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.625rem 6%;
+  color: #fff;
+  text-decoration: none;
+  transition: .2s ease;
+}
+
 .container-sidebar-woman .link-sidebar:hover,
 .container-sidebar-man .link-sidebar:hover,
-.container-sidebar-jewelery .link-sidebar:hover {
+.container-sidebar-jewelery .link-sidebar:hover,
+.container-sidebar-products .link-sidebar:hover,
+.container-sidebar-cart .link-sidebar:hover {
   transform: scale(1.05);
-
 }
 
 .container-sidebar-man i {
   font-size: 0.813rem;
 }
+
+.container-sidebar-cart i {
+  font-size: 2rem;
+}
+
+
 
 /* SECTION MAIN */
 
@@ -222,7 +261,6 @@ nav .logo-type:hover {
   align-items: center;
   width: 101%;
   box-sizing: border-box;
-
 }
 
 .container h1 {
@@ -285,7 +323,6 @@ nav .logo-type:hover {
   padding-top: 40px;
 }
 
-
 .swiper-button-next,
 .swiper-button-prev {
   color: #292929 !important;
@@ -310,13 +347,11 @@ nav .logo-type:hover {
   padding-top: 80px;
 }
 
-
 .container-clothes {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin: 50px 5%;
   /* margin-left: 20rem; */
-
 }
 
 .flex {
@@ -354,7 +389,6 @@ nav .logo-type:hover {
   object-fit: contain;
   position: relative;
   transition: .3s;
-  /* Ou object-fit: cover; dependendo do comportamento desejado */
 }
 
 .overlay {
@@ -387,7 +421,6 @@ nav .logo-type:hover {
   color: white;
 }
 
-
 .text-title {
   font-weight: bold;
 }
@@ -396,8 +429,9 @@ nav .logo-type:hover {
   font-size: 13px;
   font-weight: bold;
   color: #B0E57C;
+  text-decoration: underline;
+  padding: 10px;
 }
-
 
 .card-content button {
   background-color: #292929;
@@ -469,7 +503,6 @@ nav .logo-type:hover {
   padding: 5px;
   gap: 5px;
 }
-
 
 /* SECTION CART */
 
@@ -568,7 +601,6 @@ nav .logo-type:hover {
 
 }
 
-
 .container-total-price p {
   font-size: 19px;
   font-weight: bold;
@@ -581,7 +613,6 @@ nav .logo-type:hover {
   color: #6BBE45;
 
 }
-
 
 /* MAIN RESPONSIVE */
 
@@ -722,7 +753,6 @@ nav .logo-type:hover {
     max-width: 25%;
   }
 }
-
 
 @media screen and (max-width: 890px) {
 

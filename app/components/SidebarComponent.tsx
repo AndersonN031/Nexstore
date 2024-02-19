@@ -19,6 +19,13 @@ export default function Sidebar() {
             <div className={`slide${isOpen ? " open" : ""}`}>
                 <h1>MENU</h1>
 
+                <div className='container-sidebar-products'>
+                    <Link href="/products" className='link-sidebar'>
+                        <i className="bi bi-backpack4-fill"></i>
+                        <p>Produtos</p>
+                    </Link>
+                </div>
+
                 <div className='container-sidebar-woman'>
                     <Link href="/products/women" className='link-sidebar'>
                         <i className="fa-solid fa-person-dress"></i>
@@ -37,6 +44,13 @@ export default function Sidebar() {
                     <Link href="/products/jewelery" className='link-sidebar'>
                         <i className="fa-solid fa-gem"></i>
                         <p>Joias</p>
+                    </Link>
+                </div>
+
+                <div className='container-sidebar-cart' style={{ order: 999 }}>
+                    <Link href="/cart" className='link-sidebar'>
+                        <i className="bi bi-cart-fill"></i>
+                        <p>Carrinho</p>
                     </Link>
                 </div>
 

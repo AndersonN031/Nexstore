@@ -38,7 +38,6 @@ export default function JeweleryCategory() {
             <Header />
             <ToastContainer />
             <div className='container-store'>
-                {/* <Sidebar /> */}
                 <div className="container-clothes">
 
                     {jeweleryCategory && jeweleryCategory.map((product) => (

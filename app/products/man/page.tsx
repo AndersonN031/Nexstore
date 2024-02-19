@@ -2,7 +2,6 @@
 
 import Button from "@/app/components/ButtonComponent"
 import Header from "@/app/components/HeaderComponent"
-import Sidebar from "@/app/components/SidebarComponent"
 import notify from "@/app/components/ToastifyComponent"
 import UseCart from "@/app/hooks/useCartContext"
 import { ProductTypes } from "@/app/hooks/useProducts"
@@ -39,7 +38,6 @@ export default function ManCategory() {
             <Header />
             <ToastContainer />
             <div className='container-store'>
-                {/* <Sidebar /> */}
                 <div className="container-clothes">
                     {manCategory && manCategory.map((product) => (
                         <div className="flex" key={product.id}>

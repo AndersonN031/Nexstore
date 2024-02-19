@@ -5,7 +5,6 @@ import Header from "@/app/components/HeaderComponent";
 import Button from "@/app/components/ButtonComponent";
 import UseCart from "@/app/hooks/useCartContext";
 import { ProductTypes } from '@/app/hooks/useProducts';
-import Sidebar from '@/app/components/SidebarComponent';
 import formatedPrice from '@/app/services/service';
 import notify, { notifyError } from '@/app/components/ToastifyComponent';
 import { ToastContainer } from 'react-toastify';
@@ -46,7 +45,6 @@ export default function GetIdManCategory({ params }: any) {
     return (
         <>
             <Header />
-            {/* <Sidebar /> */}
             <ToastContainer />
             <div className="productDetails-container">
                 <div className="product-image">
