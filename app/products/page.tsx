@@ -11,7 +11,7 @@ export default function Products() {
     return (
         <>
             <Header />
-            <ToastContainer />
+            <ToastContainer className="toastify" />
             <div className='container-store'>
                 <div className="container-clothes">
                     {productList.map((product) => (

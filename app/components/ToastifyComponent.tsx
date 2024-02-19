@@ -30,5 +30,5 @@ export const notifyError = () => {
 }
 
 
-export default notify 
+export default notify
 

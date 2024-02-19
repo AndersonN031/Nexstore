@@ -172,10 +172,6 @@ nav .logo-type:hover {
   gap: 0.75rem;
 }
 
-.container-sidebar-cart .link-sidebar {
-  /* gap: 0.75rem; */
-}
-
 .container-sidebar-woman,
 .container-sidebar-man,
 .container-sidebar-jewelery,
@@ -316,6 +312,7 @@ nav .logo-type:hover {
   height: 22.5rem;
   object-fit: contain;
 }
+
 
 .card-scrollImage p {
   text-align: center;
