@@ -33,7 +33,7 @@ nav .nav-links {
 }
 
 nav i {
-  font-size: 1.875rem;
+  font-size: 2rem;
 }
 
 nav a,
@@ -49,6 +49,77 @@ nav .logo-type:hover {
   font-size: 1.375rem;
   text-decoration: underline;
 }
+
+nav .nav-links {
+  position: relative;
+  display: inline-block;
+  transition: .2s;
+}
+
+nav .nav-links:hover {
+  transform: scale(1.05);
+}
+
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: green;
+  color: white;
+  border-radius: 50%;
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+form {
+  display: flex;
+  align-items: center;
+}
+
+.inputSelect {
+  width: 600px;
+  font-size: 12px;
+  border: none;
+}
+
+
+.search-container button {
+  background-color: transparent;
+  color: #ddd;
+  border: 1px solid #ddd;
+  border-radius: 0px 5px 5px 0px;
+  cursor: pointer;
+  padding: 3px 4%;
+  background-color: #292929;
+  transition: .2s ease;
+}
+
+.search-container button:hover {
+  transform: scale(1.05);
+}
+
+.search-container i {
+  font-size: 22px;
+}
+
+.container-option {
+  display: flex;
+  align-items: center;
+}
+
+.container-option img {
+  width: 30px;
+  margin: 5px 4%;
+  cursor: pointer;
+}
+
+
 
 /* BTN-COMPONENT */
 

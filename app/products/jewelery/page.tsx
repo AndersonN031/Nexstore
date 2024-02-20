@@ -39,7 +39,6 @@ export default function JeweleryCategory() {
             <ToastContainer />
             <div className='container-store'>
                 <div className="container-clothes">
-
                     {jeweleryCategory && jeweleryCategory.map((product) => (
                         <div className="flex" key={product.id}>
                             <div className="card-content">
