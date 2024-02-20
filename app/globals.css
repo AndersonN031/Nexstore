@@ -786,9 +786,24 @@ form {
 }
 
 @media screen and (max-width: 1085px) {
+
+  /* NAV -> SEARCH RESPONSIVE */
+
+  .inputSelect {
+    display: none;
+  }
+
+  .search-container button {
+    display: none;
+  }
+
+  /* ... */
+
   .freight {
     max-width: 20%;
   }
+
+
 }
 
 
@@ -817,6 +832,7 @@ form {
     padding: 10px;
   }
 
+  /* ... */
   .freight {
     max-width: 25%;
   }
