@@ -6,6 +6,7 @@ import UseProduct, { ProductTypes } from "../hooks/useProducts";
 import UseCart from "../hooks/useCartContext";
 import React, { useEffect, useState } from "react";
 import Select, { ActionMeta, SingleValue } from 'react-select'
+import { Placeholder } from "react-bootstrap";
 
 
 export default function Header() {
@@ -86,7 +87,7 @@ export default function Header() {
                                 value={{ label: search, value: search }}
                                 options={selectOptions}
                                 onChange={handleSearchChange}
-                                placeholder="Pesquisar"
+                                placeholder='Pesquisar'
                                 className="inputSelect"
                                 styles={customStyles}
                             />
