@@ -1030,6 +1030,8 @@ form {
 }
 
 @media screen and (max-width: 830px) {
+
+
   .search-container .inputSelect {
     width: 25rem;
   }
@@ -1263,6 +1265,11 @@ form {
 }
 
 @media screen and (max-width: 490px) {
+  /* NAV RESPONSIVE */
+
+  .search-container button {
+    padding: 4px 4%;
+  }
 
   /* PAG NOT-FOUND */
   .container-notfound {
