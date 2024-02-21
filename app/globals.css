@@ -894,11 +894,12 @@ form {
   /* NAV -> SEARCH RESPONSIVE */
 
   .inputSelect {
-    display: none;
+    /* display: none; */
+    width: 30rem;
   }
 
   .search-container button {
-    display: none;
+    /* display: none; */
   }
 
   /* ... */
@@ -981,11 +982,19 @@ form {
 
   /* NAV RESPONSIVE */
   nav {
-    flex-direction: row-reverse;
+    flex-direction: column;
   }
 
   nav a {
     display: none;
+  }
+
+  nav .logo-type {
+    margin-left: 2rem;
+  }
+
+  nav .search-container {
+    margin-left: 2rem;
   }
 
   /* MAIN CONTAINER RESPONSIVE */
@@ -1106,6 +1115,26 @@ form {
   }
 }
 
+@media screen and (max-width: 600px) {
+
+  /*  NAV RESPONSIVE */
+  nav a {
+    display: none;
+  }
+
+  nav .logo-type {
+    margin-left: 2rem;
+  }
+
+  nav .search-container {
+    margin-left: 2rem;
+  }
+
+  .search-container .inputSelect {
+    width: 25rem;
+  }
+}
+
 @media screen and (max-width: 560px) {
   /* MAIN CONTAINER HOME */
 
@@ -1200,6 +1229,15 @@ form {
   }
 }
 
+@media screen and (max-width: 510px) {
+
+  /* NAV RESPONSIVE */
+
+  .search-container .inputSelect {
+    width: 20rem;
+  }
+}
+
 @media screen and (max-width: 490px) {
 
   /* PAG NOT-FOUND */
@@ -1214,6 +1252,13 @@ form {
     border-radius: 5px;
     margin: 0 4%;
     margin-top: 14rem;
+  }
+}
+
+@media screen and (max-width: 460px) {
+
+  .search-container .inputSelect {
+    width: 20rem;
   }
 }
 
