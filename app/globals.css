@@ -579,21 +579,23 @@ form {
 }
 
 .main-table {
-  padding: 0px 10%;
+  padding: 0 5%;
+  /* Reduz o padding para telas menores */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* Ocupa 100% da altura da tela */
+  width: 100%;
+  /* Ocupa 100% da largura disponível */
 }
 
 .icon-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100%;
   gap: 1rem;
+  width: 100%;
+  /* Ocupa 100% da largura disponível */
 }
 
 .icon-container i {
@@ -603,9 +605,10 @@ form {
 }
 
 .ecommerce-table {
-  padding: 20px 0;
   width: 80%;
   border-spacing: 0;
+  overflow-x: auto;
+  /* Adiciona uma barra de rolagem horizontal quando necessário */
 }
 
 .ecommerce-table th {
@@ -622,8 +625,9 @@ form {
 }
 
 .ecommerce-table tr img {
-  width: 90px;
-  height: 90px;
+  width: 60px;
+  /* Reduz o tamanho da imagem para evitar quebras */
+  height: 60px;
 }
 
 .td-img-title {
@@ -640,14 +644,18 @@ form {
   background-color: #fff;
 }
 
-
 .cart-quantity .btn-more,
 .cart-quantity .btn-less {
   background-color: transparent;
-  border: none;
-  font-size: 25px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 20px;
   cursor: pointer;
   padding: 0 5%;
+}
+
+.cart-quantity .btn-less {
+  padding: 0 9%;
 }
 
 .cart-quantity .btn-more:hover,
@@ -660,13 +668,14 @@ form {
 
 .cart-quantity span {
   font-size: 18px;
+  padding: 0 5%;
 }
 
 .container-total-price {
   display: flex;
   justify-content: end;
+  /* Se isso estiver correto, senão ajuste conforme necessário */
   margin-right: 21.3rem;
-
 }
 
 .container-total-price p {
@@ -679,7 +688,6 @@ form {
 
 .container-total-price span {
   color: #6BBE45;
-
 }
 
 /* PAG NOTFOUND */
@@ -775,12 +783,35 @@ form {
   }
 }
 
-@media screen and (max-width: 1492px) {
-  .freight {
-    max-width: 15%;
+@media (max-width: 1493px) {
+  .main-table {
+    padding: 0 5%;
+    /* Reduz o padding para telas menores */
+  }
 
+  .ecommerce-table {
+    width: 100%;
+    /* Ocupa 100% da largura disponível em telas menores */
+  }
+
+  .cart-quantity .btn-more,
+  .cart-quantity .btn-less {
+    padding: 0 5%;
+    /* Ajusta o padding dos botões para evitar quebras */
+  }
+
+  .cart-quantity span {
+    font-size: 16px;
+    /* Reduz o tamanho da fonte para evitar quebras */
+    padding: 0px 5%;
+  }
+
+  .container-total-price {
+    margin-right: 0;
+    /* Remove a margem para melhor responsividade */
   }
 }
+
 
 @media screen and (max-width: 1300px) {
 
@@ -879,6 +910,35 @@ form {
 
 }
 
+@media (max-width: 1105px) {
+  .main-table {
+    padding: 0 3%;
+    /* Reduz ainda mais o padding para telas menores */
+  }
+
+  .ecommerce-table {
+    width: 100%;
+    /* Ocupa 100% da largura disponível em telas menores */
+  }
+
+  .cart-quantity .btn-more,
+  .cart-quantity .btn-less {
+    padding: 0 3%;
+    /* Ajusta o padding dos botões para evitar quebras */
+  }
+
+  .cart-quantity span {
+    font-size: 14px;
+    /* Reduz ainda mais o tamanho da fonte para evitar quebras */
+    padding: 0px 3%;
+  }
+
+  .container-total-price {
+    margin-right: 0;
+    /* Remove a margem para melhor responsividade */
+  }
+}
+
 
 @media screen and (max-width: 926px) {
 
@@ -903,6 +963,12 @@ form {
   .container .btn-home {
     font-size: 14px;
     padding: 10px;
+  }
+
+  /* CART RESPONSIVE */
+  .td-img-title {
+    font-size: 14px;
+    text-align: center;
   }
 
   /* ... */
@@ -940,6 +1006,16 @@ form {
 
   .container-clothes {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* CART RESPONSIVE */
+  .td-img-title p {
+    margin: 0px 15%;
+  }
+
+  .ecommerce-table tr img {
+    width: 70px;
+    height: 70px;
   }
 }
 
@@ -1078,6 +1154,49 @@ form {
 
   .notfound-message {
     font-size: 1.1rem;
+  }
+
+  /* CART RESPONSIVE */
+  .ecommerce-table th {
+    display: none;
+  }
+
+  .td-img-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .td-img-title img {
+    margin-right: 10px;
+  }
+
+  .td-img-title p {
+    flex-grow: 1;
+  }
+
+  .cart-quantity {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+
+  .btn-more,
+  .btn-less {
+    display: block;
+    margin: 5px 10px;
+  }
+
+  .cart-quantity .btn-less {
+    padding: 0 10%;
+  }
+
+  .total-value-individual {
+    display: none;
+  }
+
+  .container-total-price {
+    margin: 10px 3%;
   }
 }
 

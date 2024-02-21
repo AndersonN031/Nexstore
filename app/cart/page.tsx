@@ -65,7 +65,7 @@ export default function Cart() {
                             {cart.map((cartItem) => (
                                 <tr key={cartItem.product.id}>
 
-                                    <td className="td-img-title"><img src={cartItem.product.image} alt="" /> {cartItem.product.title} </td>
+                                    <td className="td-img-title"><img src={cartItem.product.image} alt="" /> <p>{cartItem.product.title}</p> </td>
                                     <td>{formatedPrice(cartItem.product.price)}</td>
 
                                     <td className="cart-quantity">
@@ -73,7 +73,7 @@ export default function Cart() {
                                         <span>{cartItem.quantity}</span>
                                         <button className="btn-less" onClick={() => handleRemoveProduct(cartItem.product.id)}>-</button>
                                     </td>
-                                    <td>{formatedPrice(cartItem.quantity * cartItem.product.price)}</td>
+                                    <td className="total-value-individual">{formatedPrice(cartItem.quantity * cartItem.product.price)}</td>
                                 </tr>
                             ))}
                         </tbody>
