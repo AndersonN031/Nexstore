@@ -86,7 +86,6 @@ form {
   width: 600px;
   font-size: 12px;
   border: none;
-  color: orange;
 }
 
 .search-container button {
@@ -898,10 +897,6 @@ form {
     width: 30rem;
   }
 
-  .search-container button {
-    /* display: none; */
-  }
-
   /* ... */
 
   .freight {
@@ -982,7 +977,7 @@ form {
 
   /* NAV RESPONSIVE */
   nav {
-    flex-direction: column;
+    flex-direction: row;
   }
 
   nav a {
@@ -1011,6 +1006,12 @@ form {
     padding: 10px;
   }
 
+  .container-image {
+    margin-top: 5rem;
+  }
+
+
+
   /* PRODUCT-CARD RESPONSIVE */
 
   .container-clothes {
@@ -1025,6 +1026,12 @@ form {
   .ecommerce-table tr img {
     width: 70px;
     height: 70px;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .search-container .inputSelect {
+    width: 25rem;
   }
 }
 
@@ -1087,6 +1094,13 @@ form {
 
 }
 
+@media screen and (max-width: 736px) {
+  nav {
+    flex-direction: column;
+  }
+
+}
+
 @media screen and (max-width: 724px) {
   .freight {
     max-width: 30%;
@@ -1112,6 +1126,10 @@ form {
 
   .product-image {
     padding-top: 38px;
+  }
+
+  .search-container .inputSelect {
+    width: 25rem;
   }
 }
 
@@ -1229,6 +1247,12 @@ form {
   }
 }
 
+@media screen and (max-width: 530px) {
+  .search-container .inputSelect {
+    width: 22rem;
+  }
+}
+
 @media screen and (max-width: 510px) {
 
   /* NAV RESPONSIVE */
@@ -1257,28 +1281,36 @@ form {
 
 @media screen and (max-width: 460px) {
 
-  .search-container .inputSelect {
-    width: 20rem;
+  /* NAV RESPONSIVE */
+  nav .logo-type:hover {
+    transform: scale(1.02);
+    text-decoration: none;
   }
+
+  .search-container .inputSelect {
+    width: 19rem;
+  }
+
+
 }
 
 @media screen and (max-width: 390px) {
 
   /* NAV RESPONSIVE */
-  nav {
-    flex-direction: row-reverse;
-  }
-
 
   nav .logo-type {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    flex-direction: row-reverse;
   }
+
 
   nav .logo-type h1 {
     font-size: 20px;
+  }
+
+  .search-container .inputSelect {
+    width: 18rem;
   }
 
   /* MAIN CONTAINER RESPONSIVE */
@@ -1304,4 +1336,15 @@ form {
     width: 200px;
   }
 
+}
+
+@media screen and (max-width: 380px) {
+
+  .search-container {
+    display: flex;
+  }
+
+  .search-container .inputSelect {
+    width: 15rem;
+  }
 }
