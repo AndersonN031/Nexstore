@@ -6,7 +6,6 @@ import UseProduct, { ProductTypes } from "../hooks/useProducts";
 import UseCart from "../hooks/useCartContext";
 import React, { useEffect, useState } from "react";
 import Select, { ActionMeta, SingleValue } from 'react-select'
-import { Placeholder } from "react-bootstrap";
 
 
 export default function Header() {
@@ -64,7 +63,7 @@ export default function Header() {
                 window.location.href = `/products/${firstProductId}`;
             }
         } else {
-            //...
+            window.location.href = `/products/not-found/`
         }
 
 
@@ -99,7 +98,7 @@ export default function Header() {
                         <form onSubmit={handleSearchSubmit}>
 
                             <Select
-                                value={{ label: search, value: search }}
+                                value={search ? { label: search, value: search } : null}
                                 options={selectOptions}
                                 onChange={handleSearchChange}
                                 placeholder='Pesquisar'
@@ -114,6 +113,7 @@ export default function Header() {
                         </form>
 
                     </div>
+
 
                     <div className="nav-links">
                         <Link

@@ -682,6 +682,60 @@ form {
 
 }
 
+/* PAG NOTFOUND */
+
+.main-container-notfound .container-links {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 11%;
+}
+
+.container-notfound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 50px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 0 8%;
+  margin-top: 21rem;
+}
+
+.container-notfound i {
+  color: #ff0000;
+  font-size: 50px;
+}
+
+.notfound-warning {
+  font-size: 2em;
+  color: #ff0000;
+}
+
+.notfound-message {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.links-notfound {
+  display: flex;
+  justify-content: space-around;
+}
+
+.link-row i,
+.link-home i {
+  font-size: 2em;
+  color: #333;
+  transition: .2s ease;
+}
+
+.link-row i:hover,
+.link-home i:hover {
+  color: orange;
+}
+
 /* MAIN RESPONSIVE */
 
 @media screen and (max-width: 1650px) {
@@ -734,6 +788,25 @@ form {
   .container-clothes {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  /* PAG NOTFOUND */
+
+}
+
+@media screen and (max-width: 1192px) {
+  .container-notfound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 0 8%;
+    margin-top: 21rem;
+  }
+
 }
 
 @media screen and (max-width: 1150px) {
@@ -958,6 +1031,11 @@ form {
 }
 
 @media screen and (max-width: 560px) {
+  /* MAIN CONTAINER HOME */
+
+  .container-image {
+    margin-top: 5rem;
+  }
 
   .product-images-container {
     margin: 0px 0px;
@@ -980,8 +1058,45 @@ form {
     grid-template-columns: repeat(1, 1fr);
   }
 
+  /* PAG NOT-FOUND */
+  .container-notfound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 0 8%;
+    margin-top: 21rem;
+  }
+
+  .notfound-warning {
+    font-size: 1.4rem;
+  }
+
+  .notfound-message {
+    font-size: 1.1rem;
+  }
 }
 
+@media screen and (max-width: 490px) {
+
+  /* PAG NOT-FOUND */
+  .container-notfound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 0 4%;
+    margin-top: 14rem;
+  }
+}
 
 @media screen and (max-width: 390px) {
 
