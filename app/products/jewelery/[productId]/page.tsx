@@ -65,6 +65,7 @@ export default function GetIdManCategory({ params }: any) {
                     <Button title="Compre agora" onClick={handleAddToCart} />
                 </div>
             </div>
+    
         </>
     );
 }

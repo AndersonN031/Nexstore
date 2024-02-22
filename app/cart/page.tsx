@@ -5,9 +5,8 @@ import Sidebar from "../components/SidebarComponent";
 import useCart from "../hooks/useCartContext";
 import formatedPrice from "../services/service";
 
-
 export default function Cart() {
-    const { cart, addToCart, removeProduct } = useCart()
+    const { cart, addToCart, removeProduct, deleteProductFromList } = useCart()
 
     const handleAddProduct = (productId: any) => {
         // Procura um item no carrinho com base no ID do produto
@@ -42,6 +41,22 @@ export default function Cart() {
         // Exibe no console o cartItem (pode ser nulo se o produto não foi encontrado)
     }
 
+    const handleDeleteProduct = (productId: any) => {
+        // Procura um item no carrinho com base no ID do produto
+        const cartItem = cart.find((item) => item.product.id === productId);
+
+        // verifica se o item foi encontrado e se o produto está definido
+        if (cartItem && cartItem.product) {
+            // remove o produto do carrinho usando a função removeProduct
+            deleteProductFromList(cartItem.product)
+
+        } else {
+            // Se o item não foi encontrado ou não foi definido.
+            console.error('Produto não encontrado no carrinho.')
+        }
+        // Exibe no console o cartItem (pode ser nulo se o produto não foi encontrado)
+    }
+
     return (
         <>
             <Header />
@@ -52,6 +67,7 @@ export default function Cart() {
                         <i className="bi bi-cart-fill"></i>
                         <h1>Meu carrinho</h1>
                     </div>
+
                     <table className="ecommerce-table">
                         <thead>
                             <tr>
@@ -73,18 +89,22 @@ export default function Cart() {
                                         <span>{cartItem.quantity}</span>
                                         <button className="btn-less" onClick={() => handleRemoveProduct(cartItem.product.id)}>-</button>
                                     </td>
-                                    <td className="total-value-individual">{formatedPrice(cartItem.quantity * cartItem.product.price)}</td>
+                                    <td className="total-value-individual">
+                                        {formatedPrice(cartItem.quantity * cartItem.product.price)}</td>
+                                    <div className="container-btn-delete">
+                                        <button className="btn-delete-product" onClick={() => handleDeleteProduct(cartItem.product.id)}><i className="bi bi-trash-fill"></i></button>
+                                    </div>
                                 </tr>
                             ))}
                         </tbody>
                     </table>
                 </ul>
+
                 <div className="container-total-price">
                     <p>
                         Total:<span> {formatedPrice(cart.reduce((total, item) => total + item.quantity * item.product.price, 0))}</span>
                     </p>
                 </div>
-
 
             </main>
         </>

@@ -7,7 +7,8 @@ import UseCart from "@/app/hooks/useCartContext";
 import { ProductTypes } from '@/app/hooks/useProducts';
 import formatedPrice from '@/app/services/service';
 import notify, { notifyError } from '@/app/components/ToastifyComponent';
-import { Bounce, ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
+
 
 export default function GetId({ params }: any) {
     const id = params.productId;
@@ -65,6 +66,7 @@ export default function GetId({ params }: any) {
                     <Button title="Compre agora" onClick={handleAddToCart} />
                 </div>
             </div>
+            
         </>
     );
 }

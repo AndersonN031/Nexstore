@@ -4,7 +4,6 @@ import Header from "./components/HeaderComponent";
 import "@fontsource/montserrat"
 import "@fontsource/roboto"
 import Link from "next/link";
-import Sidebar from "./components/SidebarComponent";
 import { useEffect, useState } from "react";
 import { ProductTypes } from "./hooks/useProducts";
 import { register } from 'swiper/element/bundle'
@@ -61,7 +60,6 @@ export default function Home() {
   return (
     <>
       <Header />
-      {/* <Sidebar /> */}
       <main className="main-container">
         <div className="container">
           <h1>O melhor jeito de comprar que você ama!</h1>
@@ -104,7 +102,6 @@ export default function Home() {
           </Swiper>
         </div>
       </main>
-
     </>
   );
 }

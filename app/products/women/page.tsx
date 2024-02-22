@@ -63,7 +63,6 @@ export default function WomenCategory() {
                 </div>
             </div>
 
-
         </>
     )
 }

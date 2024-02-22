@@ -1,6 +1,7 @@
 "use client"
 
 import Button from "@/app/components/ButtonComponent"
+import Footer from "@/app/components/FooterComponent"
 import Header from "@/app/components/HeaderComponent"
 import notify from "@/app/components/ToastifyComponent"
 import UseCart from "@/app/hooks/useCartContext"
@@ -37,7 +38,7 @@ export default function ManCategory() {
         <>
             <Header />
             <ToastContainer />
-            <div className='container-store'>
+            <div className='container-store-man'>
                 <div className="container-clothes">
                     {manCategory && manCategory.map((product) => (
                         <div className="flex" key={product.id}>
@@ -61,6 +62,7 @@ export default function ManCategory() {
                     ))}
                 </div>
             </div>
+            <Footer />
         </>
     )
 

@@ -12,7 +12,7 @@
 header {
   position: fixed;
   width: 100%;
-  z-index: 999;
+  z-index: 997;
 }
 
 
@@ -62,8 +62,8 @@ nav .nav-links:hover {
 
 .badge {
   position: absolute;
-  top: -5px;
-  right: -5px;
+  top: -0.313rem;
+  right: -0.938rem;
   background-color: green;
   color: white;
   border-radius: 50%;
@@ -295,8 +295,7 @@ form {
 .container-sidebar-woman .link-sidebar:hover,
 .container-sidebar-man .link-sidebar:hover,
 .container-sidebar-jewelery .link-sidebar:hover,
-.container-sidebar-products .link-sidebar:hover,
-.container-sidebar-cart .link-sidebar:hover {
+.container-sidebar-products .link-sidebar:hover {
   transform: scale(1.05);
 }
 
@@ -306,6 +305,16 @@ form {
 
 .container-sidebar-cart i {
   font-size: 2rem;
+}
+
+.badge-sidebar {
+  position: absolute;
+  left: 120px;
+  background-color: green;
+  color: white;
+  border-radius: 50%;
+  padding: 4px 8px;
+  font-size: 12px;
 }
 
 
@@ -414,10 +423,16 @@ form {
   padding-top: 80px;
 }
 
+.container-store-man {
+  display: flex;
+  justify-content: center;
+  padding-top: 5rem;
+}
+
 .container-clothes {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin: 50px 5%;
+  margin-top: 50px;
   /* margin-left: 20rem; */
 }
 
@@ -577,15 +592,14 @@ form {
   margin-top: 10rem;
 }
 
+
 .main-table {
   padding: 0 5%;
-  /* Reduz o padding para telas menores */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
-  /* Ocupa 100% da largura disponível */
 }
 
 .icon-container {
@@ -594,7 +608,7 @@ form {
   justify-content: center;
   gap: 1rem;
   width: 100%;
-  /* Ocupa 100% da largura disponível */
+
 }
 
 .icon-container i {
@@ -606,8 +620,7 @@ form {
 .ecommerce-table {
   width: 80%;
   border-spacing: 0;
-  overflow-x: auto;
-  /* Adiciona uma barra de rolagem horizontal quando necessário */
+
 }
 
 .ecommerce-table th {
@@ -654,7 +667,7 @@ form {
 }
 
 .cart-quantity .btn-less {
-  padding: 0 9%;
+  padding: 0 7%;
 }
 
 .cart-quantity .btn-more:hover,
@@ -672,9 +685,9 @@ form {
 
 .container-total-price {
   display: flex;
-  justify-content: end;
-  /* Se isso estiver correto, senão ajuste conforme necessário */
-  margin-right: 21.3rem;
+  justify-content: center;
+  padding-top: 1rem;
+  margin-bottom: 20rem;
 }
 
 .container-total-price p {
@@ -687,6 +700,19 @@ form {
 
 .container-total-price span {
   color: #6BBE45;
+}
+
+.ecommerce-table .btn-delete-product {
+  color: #292929;
+  border: none;
+  border-radius: 5px;
+  padding: 4px;
+  background-color: #fff;
+  font-size: 20px;
+}
+
+.ecommerce-table .btn-delete-product:hover {
+  background-color: #ddd;
 }
 
 /* PAG NOTFOUND */
@@ -743,7 +769,51 @@ form {
   color: orange;
 }
 
-/* MAIN RESPONSIVE */
+
+/* FOOTER */
+
+main {
+  flex: 1;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  margin-top: 10rem;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright {
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+@media (min-width: 1921px) {
+  footer {
+    position: fixed;
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 1850px) {
+  footer {
+    margin-top: 20.2rem;
+  }
+}
 
 @media screen and (max-width: 1650px) {
 
@@ -1115,6 +1185,17 @@ form {
     max-width: 35%;
   }
 
+  /* FOOTER RESPONSIVE */
+
+  .footer-content {
+    flex-direction: column;
+    padding: 5px;
+  }
+
+  .footer-links {
+    padding: 5px;
+  }
+
 }
 
 @media screen and (max-width: 638px) {
@@ -1268,7 +1349,7 @@ form {
   /* NAV RESPONSIVE */
 
   .search-container button {
-    padding: 5px 4%;
+    padding: 3px 4%;
   }
 
   /* PAG NOT-FOUND */

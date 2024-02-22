@@ -13,8 +13,7 @@ type CartContextType = {
     cart: CartItem[];
     addToCart: (product: ProductTypes) => void;
     removeProduct: (productId: ProductTypes) => void;
-    // increaseQuantity: (productId: number) => void;
-    // decreaseQuantity: (productId: number) => void;
+    deleteProductFromList: (productId: ProductTypes) => void; 
 }
 
 // criando o contexto do carrinho
@@ -86,12 +85,21 @@ export const CartProvider = ({ children }: { children?: ReactNode }) => {
         }
     };
 
+    const deleteProductFromList = (product: ProductTypes) => {
+        const productInCart = cart.find(item => item.product.id === product.id)
 
+        if (productInCart) {
+            const updatedCart: CartItem[] = cart.filter(item => item.product.id !== product.id);
+            localStorage.setItem('shopping-cart', JSON.stringify(updatedCart));
+            setCart(updatedCart);
+        }
+    }
 
     const contextValue: CartContextType = {
         cart,
         addToCart,
-        removeProduct
+        removeProduct,
+        deleteProductFromList
     }
 
 

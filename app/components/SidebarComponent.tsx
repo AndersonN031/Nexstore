@@ -1,9 +1,12 @@
 "use client"
 import Link from 'next/link';
 import React, { useState } from 'react';
+import UseCart from '../hooks/useCartContext';
 
 export default function Sidebar() {
+    const { cart } = UseCart()
     const [isOpen, setIsOpen] = useState(false);
+
     const toggleSidebar = () => {
         setIsOpen(!isOpen);
     };
@@ -51,6 +54,7 @@ export default function Sidebar() {
                     <Link href="/cart" className='link-sidebar'>
                         <i className="bi bi-cart-fill"></i>
                         <p>Carrinho</p>
+                        <span className='badge-sidebar'>{cart.reduce((total, item) => total + item.quantity, 0)}</span>
                     </Link>
                 </div>
 
