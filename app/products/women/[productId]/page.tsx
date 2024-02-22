@@ -1,6 +1,7 @@
 "use client"
 
 import Button from "@/app/components/ButtonComponent";
+import Footer from "@/app/components/FooterComponent";
 import Header from "@/app/components/HeaderComponent";
 import notify, { notifyError } from "@/app/components/ToastifyComponent";
 import UseCart from "@/app/hooks/useCartContext";
@@ -60,6 +61,7 @@ export default function GetIdWomenCategory({ params }: any) {
                     <Button title="Compre agora" onClick={handleAddToCart} />
                 </div>
             </div>
+            <Footer/>
         </>
     )
 }

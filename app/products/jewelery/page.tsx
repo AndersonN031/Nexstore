@@ -1,6 +1,7 @@
 "use client"
 
 import Button from '@/app/components/ButtonComponent';
+import Footer from '@/app/components/FooterComponent';
 import Header from '@/app/components/HeaderComponent';
 import notify from '@/app/components/ToastifyComponent';
 import UseCart from '@/app/hooks/useCartContext';
@@ -64,6 +65,7 @@ export default function JeweleryCategory() {
                     ))}
                 </div>
             </div>
+            <Footer/>
         </>
     );
 }

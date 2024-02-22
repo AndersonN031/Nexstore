@@ -8,6 +8,7 @@ import { ProductTypes } from '@/app/hooks/useProducts';
 import formatedPrice from '@/app/services/service';
 import notify, { notifyError } from '@/app/components/ToastifyComponent';
 import { ToastContainer } from 'react-toastify';
+import Footer from '@/app/components/FooterComponent';
 
 
 export default function GetId({ params }: any) {
@@ -66,7 +67,7 @@ export default function GetId({ params }: any) {
                     <Button title="Compre agora" onClick={handleAddToCart} />
                 </div>
             </div>
-            
+            <Footer/>
         </>
     );
 }

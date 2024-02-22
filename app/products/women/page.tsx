@@ -8,6 +8,7 @@ import Link from "next/link"
 import { useEffect, useState } from "react"
 import { ToastContainer } from "react-toastify"
 import notify from '@/app/components/ToastifyComponent';
+import Footer from "@/app/components/FooterComponent"
 
 export default function WomenCategory() {
     const [womanCategory, setWomenCategory] = useState<ProductTypes[]>()
@@ -62,7 +63,7 @@ export default function WomenCategory() {
                     ))}
                 </div>
             </div>
-
+            <Footer />
         </>
     )
 }

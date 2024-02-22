@@ -16,6 +16,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import Footer from "./components/FooterComponent";
 
 export default function Home() {
 
@@ -102,6 +103,7 @@ export default function Home() {
           </Swiper>
         </div>
       </main>
+      <Footer />
     </>
   );
 }

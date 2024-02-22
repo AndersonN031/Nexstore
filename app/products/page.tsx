@@ -1,5 +1,6 @@
 "use client"
 
+import Footer from "../components/FooterComponent";
 import Header from "../components/HeaderComponent";
 import ProductCard from "../components/ProductCardComponent";
 import UseProduct from "../hooks/useProducts";
@@ -19,7 +20,7 @@ export default function Products() {
                     ))}
                 </div>
             </div >
-    
+            <Footer />
         </>
     );
 }
