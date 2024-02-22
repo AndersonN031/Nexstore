@@ -38,7 +38,7 @@ export default function JeweleryCategory() {
         <>
             <Header />
             <ToastContainer />
-            <div className='container-store'>
+            <div className='container-store-jewelery'>
                 <div className="container-clothes">
                     {jeweleryCategory && jeweleryCategory.map((product) => (
                         <div className="flex" key={product.id}>
@@ -65,7 +65,7 @@ export default function JeweleryCategory() {
                     ))}
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </>
     );
 }
